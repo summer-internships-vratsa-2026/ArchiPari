@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакти — ArchiPari</title>
+<meta name="description" content="Свържете се с екипа на ArchiPari — въпроси, сигнали за грешни цени или предложения за нови магазини.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Archi<span>Pari</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Отвори меню" aria-expanded="false">☰ Меню</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Начало</a>
+      <a href="index.html#products">Материали</a>
+      <a href="contact.html" class="active">Контакти</a>
+    </nav>
+  </div>
+</header>
+<div class="hazard-strip"></div>
+ 
+<section class="page-hero">
+  <div class="container">
+    <h1>Свържете се с нас</h1>
+    <p>Забелязали сте грешна цена, липсващ магазин или имате идея как да подобрим ArchiPari? Пишете ни.</p>
+  </div>
+</section>
+ 
+<section class="container contact-wrap">
+  <form class="contact-form" id="contactForm" novalidate>
+    <div class="form-row">
+      <label for="name">Име</label>
+      <input type="text" id="name" name="name" required autocomplete="name">
+    </div>
+    <div class="form-row">
+      <label for="email">Имейл</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+    </div>
+    <div class="form-row">
+      <label for="topic">Тема</label>
+      <select id="topic" name="topic">
+        <option value="price-error">Грешна / остаряла цена</option>
+        <option value="new-store">Предложение за нов магазин</option>
+        <option value="general">Общ въпрос</option>
+        <option value="partnership">Партньорство</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="message">Съобщение</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit" class="btn-primary">Изпрати съобщение</button>
+    <p class="form-status" id="formStatus"></p>
+  </form>
+ 
+  <div class="contact-info">
+    <div class="info-card">
+      <h4>Имейл</h4>
+      <p>info@archipari.bg</p>
+    </div>
+    <div class="info-card">
+      <h4>Работно време на екипа</h4>
+      <p>Понеделник – Петък, 09:00 – 18:00 ч.</p>
+    </div>
+    <div class="info-card">
+      <h4>Магазини, които сравняваме</h4>
+      <p>Ако забележите разлика между показаната и реалната цена в магазина, пишете ни категорията и артикула — проверяваме ръчно.</p>
+      <div class="store-list-inline">
+        <span>Praktiker</span><span>Homemax</span><span>Inex</span>
+        <span>Gstroy</span><span>Domestico</span><span>Bauhaus</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h4>ArchiPari</h4>
+      <p>Независима платформа за сравнение на цени на строителни материали от най-големите вериги в България.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Навигация</h4>
+      <a href="index.html">Начало</a>
+      <a href="index.html#products">Материали</a>
+      <a href="contact.html">Контакти</a>
+    </div>
+    <div class="footer-col">
+      <h4>Магазини в сравнението</h4>
+      <p>Praktiker · Homemax · Inex · Gstroy · Domestico · Bauhaus</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 ArchiPari. Всички права запазени.</span>
+    <span>Цените са ориентировъчни и може да се различават от касовата бележка в магазина.</span>
+  </div>
+</footer>
+ 
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+"""
+scrape_praktiker.py
+--------------------
+Скрапер за Praktiker.
+ 
+Стартиране самостоятелно (за тест):
+    python scrape_praktiker.py
+"""
+ 
+import json
+import time
+import requests
+from bs4 import BeautifulSoup
+ 
+STORE_ID = "praktiker"
+STORE_NAME = "Praktiker"
+BASE_URL = "https://www.praktiker.bg"
+ 
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+    )
+}
+ 
+# Съпоставяне: вътрешен id на продукт -> данни за него в Praktiker.
+# "name", "category" и "unit" се ползват само за автоматично създаване
+# на нов продукт в data/products.json, ако той още го няма там.
+PRODUCTS = {
+    "pvc-lamperiya-wood": {
+        "url": f"{BASE_URL}/Lamperiya/3D-MDF-LAMPERIYa-KRONO-ORIGINAL-KRONOWALL-DAB-SANDANS/p/142328",
+        "name": "PVC Ламперия Дърво",
+        "category": "Дърво и ОСБ",
+        "unit": "м²",
+    },
+    "beton-suha-smes-25kg": {  # <- същото id във всички скрапери за този продукт!
+        "url": f"{BASE_URL}/Tziment-i-preobrazuvateli/BETON--SUH-RAZTVOR-ZA-BETONIRANE-BAUMIT/p/476278",
+        "name": "Готова бетонова смес, 25 кг",
+        "category": "Цимент и бетон",
+        "unit": "чувал",
+        "label": "БЕТОН СУХ РАЗТВОР ЗА БЕТОНИРАНЕ BAUMIT, 25 кг",
+    },
+    "cement-42-5-25kg": {
+        "url": f"{BASE_URL}/Tziment-i-preobrazuvateli/TzIMENT-HOLCIM-TzIMENT-CEM-II-B-LL-42-5R/p/496669",
+        "name": "Цимент 42.5, 25 кг",
+        "category": "Цимент и бетон",
+        "unit": "чувал",
+        "label": "ЦИМЕНТ HOLCIM ЦИМЕНТ CEM II/B-LL 42.5R",
+    },
+    "zamazka-samorazlivna-25kg": {
+        "url": f"{BASE_URL}/Podovi-zamazki/SAMORAZLIVNA-ZAMAZKA-OT-2-DO-20-MM-CERESIT-CN-68/p/436778",
+        "name": "Саморазливна замазка, 25 кг",
+        "category": "Цимент и бетон",
+        "unit": "чувал",
+        "label": "САМОРАЗЛИВНА ЗАМАЗКА ОТ 2 ДО 20 MM CERESIT CN 68",
+    },
+    "hidroizolacia-kristalizirashta-25kg": {
+        "url": f"{BASE_URL}/Hidroizolaciya-za-bani-i-terasi/KRISTALIZIRAShtA--HIDROIZOLATzIYa--ShLAM-CERESIT-CR-90/p/435855",
+        "name": "Хидроизолация кристализираща, 25 кг",
+        "category": "Цимент и бетон",
+        "unit": "чувал",
+        "label": "КРИСТАЛИЗИРАЩА ХИДРОИЗОЛАЦИЯ, ШЛАМ CERESIT CR 90",
+    },
+    "vintovertka-akum-18v": {
+        "url": f"{BASE_URL}/Akumulatorni-bormashini-i-vintoverti/AKUMULATORNA-UDARNA-BORMAShINA-S-DVE-BATERII-1-5-AH-I-ZARYaDNO-BLACK-DECKER-BDCHD18BAFC-QW/p/488507",
+        "name": "Акумулаторна винтоверта 18V, 2 батерии",
+        "category": "Инструменти",
+        "unit": "брой",
+        "label": "АКУМУЛАТОРНА УДАРНА БОРМАШИНА С ДВЕ БАТЕРИИ 1.5 AH И ЗАРЯДНО BLACK&DECKER BDCHD18BAFC-QW",
+    },
+    # ... добави останалите продукти тук, по същия модел
+}
+ 
+ 
+def fetch_page(url: str) -> str:
+    resp = requests.get(url, headers=HEADERS, timeout=15)
+    resp.raise_for_status()
+ 
+    # Оставено за debug — презаписва се на всяка заявка, така че пази
+    # само последната изтеглена страница. Полезно е при настройване на
+    # селектора в parse_price(), но не е нужно за нормална работа.
+    with open("test.html", "w", encoding="utf-8") as f:
+        f.write(resp.text)
+ 
+    return resp.text
+ 
+ 
+# Ключови думи, по които разпознаваме, че даден ценови ред е за ОПАКОВКА
+# (пакет, стек, к-т и т.н.), а не за базовата мерна единица (м², кг, г...).
+# Такива редове НЕ трябва да се вземат — искаме само цената за базовата
+# единица, както се показва при "Цена М2:", "Цена КГ:" и т.н.
+_PACKAGE_KEYWORDS = ("пакет", "к-т", "комплект", "стек", "опаковка", "кутия", "палет")
+
+
+def _is_package_label(label: str) -> bool:
+    if not label:
+        return False
+    low = label.lower()
+    return any(kw in low for kw in _PACKAGE_KEYWORDS)
+
+
+def _extract_eur_price(item) -> float | None:
+    """От елемент .product-store-prices__item взема САМО стойността в
+    евро (не в лева) от вложените .product-price подредове."""
+    for price_el in item.select(".product-price"):
+        text = price_el.get_text(" ", strip=True)
+        if "€" not in text:
+            continue
+        raw = text.replace("€", "").replace(",", ".").strip()
+        try:
+            return float(raw)
+        except ValueError:
+            continue
+    return None
+
+
+def _extract_price_from_jsonld(soup: BeautifulSoup) -> float | None:
+    """Извлича цената от вградения schema.org JSON-LD блок
+    (<script type="application/ld+json">, "@type": "Product").
+
+    Това е по-надежден източник от CSS селекторите по-долу: при част от
+    продуктите (напр. цимента) секцията ".product-store-prices__item"
+    изобщо не се рендира в статичния HTML на страницата на продукта (тя
+    се появява само за "подобни продукти"/аксесоари по-надолу), докато
+    JSON-LD блокът с offers.price винаги е наличен и е в EUR."""
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(script.string or "")
+        except (TypeError, ValueError):
+            continue
+
+        entries = data if isinstance(data, list) else [data]
+        for entry in entries:
+            if not isinstance(entry, dict) or entry.get("@type") != "Product":
+                continue
+
+            offers = entry.get("offers")
+            if not offers:
+                continue
+            offer_list = offers if isinstance(offers, list) else [offers]
+
+            for offer in offer_list:
+                if not isinstance(offer, dict):
+                    continue
+                price = offer.get("price")
+                if price is None:
+                    continue
+                currency = offer.get("priceCurrency")
+                if currency and currency != "EUR":
+                    continue  # искаме цената само в евро
+                try:
+                    return float(str(price).replace(",", "."))
+                except ValueError:
+                    continue
+
+    return None
+
+
+def parse_price(html: str) -> float | None:
+    """Извлича цената в ЕВРО за БАЗОВАТА мерна единица (м², кг, г...).
+
+    1) Основен метод: JSON-LD блокът на Praktiker (виж
+       _extract_price_from_jsonld) — най-стабилен, винаги присъства.
+    2) Резервен метод: CSS селекторите за редовете "Цена М2:" / "Цена КГ:"
+       вътре в контейнера .pdp, като изрично прескачаме редовете за
+       опаковка/пакет (напр. "Цена за ПАКЕТ (1 ПАКЕТ - 1.62 M2):").
+       Ползва се само ако JSON-LD не даде резултат."""
+    soup = BeautifulSoup(html, "lxml")
+
+    jsonld_price = _extract_price_from_jsonld(soup)
+    if jsonld_price is not None:
+        return jsonld_price
+
+    scope = soup.select_one(".pdp") or soup
+    items = scope.select(".product-store-prices__item")
+
+    for item in items:
+        title_el = item.select_one(".product-store-prices__title")
+        label = title_el.get_text(" ", strip=True) if title_el else ""
+        if _is_package_label(label):
+            continue  # пропускаме "Цена за ПАКЕТ / К-Т / ..."
+
+        price = _extract_eur_price(item)
+        if price is not None:
+            return price
+
+    return None
+ 
+ 
+def parse_image(html: str, page_url: str) -> str | None:
+    """Извлича URL на главната снимка на продукта.
+    TODO: провери в test.html (генерира се от fetch_page) какъв точно
+    е маркъпът при Praktiker и коригирай селектора при нужда — og:image
+    е разумна първа стъпка, защото почти винаги е коректно попълнен."""
+    soup = BeautifulSoup(html, "lxml")
+ 
+    og_image = soup.select_one('meta[property="og:image"]')
+    if og_image and og_image.get("content"):
+        return og_image["content"]
+ 
+    # Резервен вариант — селекторът по-долу е примерен, провери в test.html:
+    img_el = soup.select_one(".product-gallery img, .product-image img, [itemprop='image']")
+    if img_el:
+        src = img_el.get("src") or img_el.get("data-src")
+        if src:
+            if src.startswith("//"):
+                return "https:" + src
+            if src.startswith("/"):
+                return BASE_URL + src
+            return src
+ 
+    return None
+ 
+ 
+def scrape_all(delay_seconds: float = 1.5) -> dict:
+    """Обхожда всички продукти на Praktiker от PRODUCTS и връща:
+    {
+      product_id: {
+        "price": 12.49,
+        "image": "https://.../snimka.jpg",  # или None
+        "url": "https://.../produkt",
+        "name": "...",
+        "category": "...",
+        "unit": "..."
+      }
+    }
+    """
+    results = {}
+    for product_id, info in PRODUCTS.items():
+        url = info["url"]
+        try:
+            html = fetch_page(url)
+            price = parse_price(html)
+            if price is not None:
+                results[product_id] = {
+                    "price": price,
+                    "image": parse_image(html, url),
+                    "url": url,
+                    "label": info.get("label"),
+                    "name": info.get("name", product_id),
+                    "category": info.get("category", "Некатегоризирани"),
+                    "unit": info.get("unit", "брой"),
+                }
+            else:
+                print(f"[{STORE_ID}] Не намерих цена за {product_id} ({url})")
+        except requests.RequestException as e:
+            print(f"[{STORE_ID}] Грешка при {url}: {e}")
+ 
+        time.sleep(delay_seconds)  # учтива пауза между заявките
+ 
+    return results
+ 
+ 
+if __name__ == "__main__":
+    found = scrape_all()
+    print(f"{STORE_ID}: намерени {len(found)} цени")
+    for pid, info in found.items():
+        has_img = "да" if info.get("image") else "не"
+        print(f"  {pid}: {info['price']:.2f} лв. (снимка: {has_img})")

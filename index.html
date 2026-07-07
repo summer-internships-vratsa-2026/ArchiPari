@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArchiPari — Сравни цени на строителни материали в България</title>
+<meta name="description" content="Сравнявайте актуални цени на строителни материали от Praktiker, Homemax, Inex, Gstroy, Domestico, Bauhaus и други вериги на едно място.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Archi<span>Pari</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Отвори меню" aria-expanded="false">☰ Меню</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="active">Начало</a>
+      <a href="index.html#products">Материали</a>
+      <a href="contact.html">Контакти</a>
+    </nav>
+  </div>
+</header>
+<div class="hazard-strip"></div>
+ 
+<section class="hero">
+  <div class="container">
+    <span class="updated-badge"><span class="dot"></span> Цените се обновяват автоматично — последно обновяване: <span id="lastUpdated">—</span></span>
+    <h1>Сравни цени на строителни материали <em>преди да купиш</em></h1>
+    <p class="lead">Събираме и сравняваме цени от най-големите строителни вериги в България — Praktiker, Homemax, Inex, Gstroy, Domestico, Bauhaus и други — за да намериш най-добрата оферта бързо.</p>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Търси материал, напр. „цимент“, „гипсокартон“, „боя“…" aria-label="Търсене на материал">
+      <button id="searchBtn" type="button">Търси</button>
+    </div>
+  </div>
+</section>
+ 
+<section class="filters-section">
+  <div class="container filters-inner">
+    <div class="filter-group">
+      <label for="categoryFilter">Категория</label>
+      <select id="categoryFilter">
+        <option value="all">Всички категории</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="sortFilter">Подреди по</label>
+      <select id="sortFilter">
+        <option value="name-asc">Име (А–Я)</option>
+        <option value="price-asc">Най-ниска цена</option>
+        <option value="price-desc">Най-висока цена</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Магазини</label>
+      <div class="store-toggles" id="storeToggles"></div>
+    </div>
+    <div class="result-count" id="resultCount"></div>
+  </div>
+</section>
+ 
+<main class="products-section" id="products">
+  <div class="container" id="productsContainer">
+    <!-- Продуктите се генерират динамично от js/script.js -->
+  </div>
+</main>
+ 
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h4>ArchiPari</h4>
+      <p>Независима платформа за сравнение на цени на строителни материали от най-големите вериги в България.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Навигация</h4>
+      <a href="index.html">Начало</a>
+      <a href="index.html#products">Материали</a>
+      <a href="contact.html">Контакти</a>
+    </div>
+    <div class="footer-col">
+      <h4>Магазини в сравнението</h4>
+      <p>Praktiker · Homemax · Inex · Gstroy · Domestico · Bauhaus</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 ArchiPari. Всички права запазени.</span>
+    <span>Цените са ориентировъчни и може да се различават от касовата бележка в магазина.</span>
+  </div>
+</footer>
+ 
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
