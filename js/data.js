@@ -126,10 +126,10 @@ window.STROYTSENI_DATA = {
       "unit": "брой",
       "offers": {
         "praktiker": {
-          "price": 112.4,
-          "image": "https://api.praktiker.bg/medias/Product-details-main-488507.jpg?context=bWFzdGVyfHJvb3R8MjgyOTUzfGltYWdlL2pwZWd8YURJMEwyaGlOQzh6TkRReE5UTTNNamM1TlRrek5DOVFjbTlrZFdOMExXUmxkR0ZwYkhNdGJXRnBibDgwT0RnMU1EY3VhbkJufDBlM2EyMjE5YzM4NDAzNzM5NGIzMmQ1YWU5NGFiZmE3MzA0Y2JmNjVhNGNjMThjOGViOTZhYWI1MGNlYzA5OTE",
-          "url": "https://www.praktiker.bg/Akumulatorni-bormashini-i-vintoverti/AKUMULATORNA-UDARNA-BORMAShINA-S-DVE-BATERII-1-5-AH-I-ZARYaDNO-BLACK-DECKER-BDCHD18BAFC-QW/p/488507",
-          "label": "АКУМУЛАТОРНА УДАРНА БОРМАШИНА С ДВЕ БАТЕРИИ 1.5 AH И ЗАРЯДНО BLACK&DECKER BDCHD18BAFC-QW"
+          "price": 168.7,
+          "image": "https://api.praktiker.bg/medias/144086.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8NjA1Mzh8aW1hZ2UvanBlZ3xhRGd6TDJnMU9TOHlOelE0TmpjNU5qSTRNemt6TkM1cWNHY3xmZjA4ZWM5NTUwYmZiMjdiN2FiYzVlZmE5MWEwNTllYTc0YmUzMTU2OWJjMmY2NmQ1NjdhOTMwMDE2YzE3YmFi",
+          "url": "https://www.praktiker.bg/Akumulatorni-bormashini-i-vintoverti/AKUMULATORNA-BEZChETKOVA-BORMAShINA-BOSCH-PROFESSIONAL-GSR-185-Li/p/144086",
+          "label": "АКУМУЛАТОРЕН ВИНТОВЕРТ BOSCH PROFESSIONAL GSR 185 Li 18V, 50Nm, 2х2.0Ah"
         },
         "homemax": {
           "price": 122.2,
@@ -153,7 +153,7 @@ window.STROYTSENI_DATA = {
     },
     {
       "id": "pvc-lamperiya-wood",
-      "name": "3D MDF ламперия Krono Original Kronowall, дъб Сандан",
+      "name": "Стенна ламперия за интериор (цена за м²)",
       "category": "Дърво и ОСБ",
       "unit": "м²",
       "offers": {
@@ -168,7 +168,8 @@ window.STROYTSENI_DATA = {
           "url": "https://www.home-max.bg/pvc-lamperiya-motivo-classic-25sm-8mm-2-65-m2-toffy-wood-karamel/",
           "label": "PVC Ламперия Motivo Classic 25см/8мм 2,65 м2 Toffy Wood/Карамел"
         }
-      }
+      },
+      "matchNote": "Забележка за съпоставянето: продуктите не са от един и същи материал. При Praktiker наличният продукт е 3D MDF ламперия (Krono Original Kronowall) — по-скъп, декоративен материал. При HomeMax е PVC ламперия (Motivo Classic) — по-евтин материал. Разликата в цената идва основно от материала, не само от магазина."
     },
     {
       "id": "terakot-serra-ara-grigio-34x34-cm",
@@ -245,7 +246,8 @@ window.STROYTSENI_DATA = {
           "url": "https://gstroy.bg/product/12883-hidroizolacija-kristalizirashta-cr-90-25kg",
           "label": "ХИДРОИЗОЛАЦИЯ КРИСТАЛИЗИРАЩА CR 90 25кг"
         }
-      }
+      },
+      "matchNote": "Забележка за съпоставянето: при Inex няма наличен Ceresit CR90 (25 кг) — най-близкият реален продукт е хидроизолационна мазилка TKK HydroBlocker Hidroizol S, но в МНОГО по-малка опаковка (7 кг вместо 25 кг). Цената на Inex по-долу НЕ е сравнима на килограм с другите 3 магазина — не приемай я за \"най-евтина\", без сам да пределиш цена/кг."
     },
     {
       "id": "osb-plocha-15mm",

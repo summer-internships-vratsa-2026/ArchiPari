@@ -28,10 +28,17 @@ HEADERS = {
 # на нов продукт в data/products.json, ако той още го няма там.
 PRODUCTS = {
     "pvc-lamperiya-wood": {
+        # ЗАБЕЛЕЖКА: продуктовото "name" тук е material-неутрално нарочно —
+        # реалният продукт е 3D MDF ламперия (не PVC!), докато при HomeMax
+        # е истинска PVC ламперия. Виж matchNote в data/products.json.
+        # run_all.py презаписва "name" САМО ако продуктът тепърва се
+        # създава — за съществуващ продукт стойността в products.json има
+        # превес, затова смени я и тук, за да останат в синхрон.
         "url": f"{BASE_URL}/Lamperiya/3D-MDF-LAMPERIYa-KRONO-ORIGINAL-KRONOWALL-DAB-SANDANS/p/142328",
-        "name": "PVC Ламперия Дърво",
+        "name": "Стенна ламперия за интериор (цена за м²)",
         "category": "Дърво и ОСБ",
         "unit": "м²",
+        "label": "3D MDF ламперия Krono Original Kronowall, дъб Сандан",
     },
     "beton-suha-smes-25kg": {  # <- същото id във всички скрапери за този продукт!
         "url": f"{BASE_URL}/Tziment-i-preobrazuvateli/BETON--SUH-RAZTVOR-ZA-BETONIRANE-BAUMIT/p/476278",
@@ -62,11 +69,21 @@ PRODUCTS = {
         "label": "КРИСТАЛИЗИРАЩА ХИДРОИЗОЛАЦИЯ, ШЛАМ CERESIT CR 90",
     },
     "vintovertka-akum-18v": {
-        "url": f"{BASE_URL}/Akumulatorni-bormashini-i-vintoverti/AKUMULATORNA-UDARNA-BORMAShINA-S-DVE-BATERII-1-5-AH-I-ZARYaDNO-BLACK-DECKER-BDCHD18BAFC-QW/p/488507",
+        # ПОПРАВЕНО: старият URL сочеше към "АКУМУЛАТОРНА УДАРНА БОРМАШИНА"
+        # (Black&Decker BDCHD18BAFC-QW) — това е УДАРЕН инструмент, различна
+        # категория от "винтоверт" (при HomeMax/Inex/GStroy офертите за
+        # този продукт са всички от типа "бормашина-винтоверт" БЕЗ ударна
+        # функция: Bosch UniversalDrill, Metabo BS18L, Bosch GSR 18V-50).
+        # Заменено с реален, наличен продукт от същия клас: Bosch
+        # Professional GSR 185-LI — самата страница на Praktiker го описва
+        # изрично като "Акумулаторният винтоверт GSR 185-LI Professional",
+        # без ударна функция. Проверено на живо (юли 2026): в наличност,
+        # 168.70 € / 329.95 лв.
+        "url": f"{BASE_URL}/Akumulatorni-bormashini-i-vintoverti/AKUMULATORNA-BEZChETKOVA-BORMAShINA-BOSCH-PROFESSIONAL-GSR-185-Li/p/144086",
         "name": "Акумулаторна винтоверта 18V, 2 батерии",
         "category": "Инструменти",
         "unit": "брой",
-        "label": "АКУМУЛАТОРНА УДАРНА БОРМАШИНА С ДВЕ БАТЕРИИ 1.5 AH И ЗАРЯДНО BLACK&DECKER BDCHD18BAFC-QW",
+        "label": "АКУМУЛАТОРЕН ВИНТОВЕРТ BOSCH PROFESSIONAL GSR 185 Li 18V, 50Nm, 2х2.0Ah",
     },
     # ... добави останалите продукти тук, по същия модел
 }
