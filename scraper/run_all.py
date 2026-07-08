@@ -20,12 +20,13 @@ import scrape_praktiker
 import scrape_homemax
 import scrape_inex
 import scrape_gstroy
+import scrape_domestico
 SCRAPER_MODULES = [
     "scrape_praktiker",
     "scrape_homemax",
     "scrape_inex",
     "scrape_gstroy",
-    # "scrape_domestico",
+    "scrape_domestico",
     # "scrape_bauhaus",
 ]
  

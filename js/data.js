@@ -1,5 +1,5 @@
 window.STROYTSENI_DATA = {
-  "lastUpdated": "2026-07-07T12:19:41.986534+03:00",
+  "lastUpdated": "2026-07-08T10:15:08.911460+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -20,6 +20,11 @@ window.STROYTSENI_DATA = {
       "id": "gstroy",
       "name": "Gstroy",
       "url": "https://gstroy.bg"
+    },
+    {
+      "id": "domestico",
+      "name": "Domestico",
+      "url": "https://www.domestico.bg"
     }
   ],
   "categories": [
@@ -58,7 +63,7 @@ window.STROYTSENI_DATA = {
           "label": "Цимент Premium Devnya 42.5R 25 кг."
         },
         "gstroy": {
-          "price": 9.72,
+          "price": 5.94,
           "image": "https://assets.gstroy.bg/media/filer_public/81/4b/814b9237-0b36-4324-9024-17d5195d35b7/13381-image-10200040013.jpg",
           "url": "https://gstroy.bg/product/13381-ciment-25kg-varovik-holsim-n42-5",
           "label": "ЦИМЕНТ 25кг ВАРОВИК ХОЛСИМ Н42.5 (CEM II/A-LL 42.5N)"
@@ -239,6 +244,33 @@ window.STROYTSENI_DATA = {
           "image": "https://assets.gstroy.bg/media/filer_public/c2/53/c253e4a5-5cee-43cf-87d5-546cb386f157/12883-image-10500210002.jpg",
           "url": "https://gstroy.bg/product/12883-hidroizolacija-kristalizirashta-cr-90-25kg",
           "label": "ХИДРОИЗОЛАЦИЯ КРИСТАЛИЗИРАЩА CR 90 25кг"
+        }
+      }
+    },
+    {
+      "id": "osb-plocha-15mm",
+      "name": "OSB плоскост 15 мм (цена за м²)",
+      "category": "Дърво и ОСБ",
+      "unit": "м²",
+      "matchNote": "Забележка за съпоставянето: при Gstroy наличният вариант е OSB-2 (обикновен, не влагоустойчив), докато Praktiker и HomeMax предлагат OSB-3 (влагоустойчив) — не са напълно еднакъв клас плоскост. Inex не продава строителни плоскости (специализиран е основно в инструменти и електроинструменти), затова не участва в това сравнение.",
+      "offers": {
+        "praktiker": {
+          "price": 9.28,
+          "image": "https://api.praktiker.bg/medias/137972.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8MTM0OTYyfGltYWdlL2pwZWd8YURsaEwyaG1OaTh6TURjM01EVTFPVGMzT0RnME5pNXFjR2N8MmUyM2ZjYmQ3MTQyNGI0OTQ3NTZlYjRmYzRiMzc3ZmEzMjk5NWRkNWY2MmU4NDdmZTYxMzIyOTIwOTBmMWUxMg",
+          "url": "https://praktiker.bg/bg/Ploskosti-i-rabotni-plotove/OSB-3-15MM-1250H2500MM-KRONOSPAN-3-125-M2-VLAGOUSTOYChIV/p/137972",
+          "label": "OSB-3 15мм 1250х2500мм (3.125 м²) KRONOSPAN, влагоустойчив — 28.99 €/бр."
+        },
+        "homemax": {
+          "price": 8.85,
+          "image": "https://www.home-max.bg/static/media/ups/products/main/21186516_03916551a.png?v=17.95",
+          "url": "https://www.home-max.bg/osb-3-neshlajfano-15mm-25-56/",
+          "label": "OSB-3 нешлайфано 15мм, 2500х1250мм, влагоустойчив"
+        },
+        "gstroy": {
+          "price": 5.96,
+          "image": null,
+          "url": "https://gstroy.bg/product/13013-osb-2-15mm-2440h1220",
+          "label": "ОСБ 2 15мм 2440х1220мм (не влагоустойчив) — 34.68 лв./бр."
         }
       }
     }

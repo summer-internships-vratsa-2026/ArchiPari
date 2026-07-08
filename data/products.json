@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T12:19:41.986534+03:00",
+  "lastUpdated": "2026-07-08T10:41:55.231286+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -20,6 +20,11 @@
       "id": "gstroy",
       "name": "Gstroy",
       "url": "https://gstroy.bg"
+    },
+    {
+      "id": "domestico",
+      "name": "Domestico",
+      "url": "https://www.domestico.bg"
     }
   ],
   "categories": [
@@ -58,7 +63,7 @@
           "label": "Цимент Premium Devnya 42.5R 25 кг."
         },
         "gstroy": {
-          "price": 9.72,
+          "price": 10.8,
           "image": "https://assets.gstroy.bg/media/filer_public/81/4b/814b9237-0b36-4324-9024-17d5195d35b7/13381-image-10200040013.jpg",
           "url": "https://gstroy.bg/product/13381-ciment-25kg-varovik-holsim-n42-5",
           "label": "ЦИМЕНТ 25кг ВАРОВИК ХОЛСИМ Н42.5 (CEM II/A-LL 42.5N)"
@@ -239,6 +244,61 @@
           "image": "https://assets.gstroy.bg/media/filer_public/c2/53/c253e4a5-5cee-43cf-87d5-546cb386f157/12883-image-10500210002.jpg",
           "url": "https://gstroy.bg/product/12883-hidroizolacija-kristalizirashta-cr-90-25kg",
           "label": "ХИДРОИЗОЛАЦИЯ КРИСТАЛИЗИРАЩА CR 90 25кг"
+        }
+      }
+    },
+    {
+      "id": "osb-plocha-15mm",
+      "name": "OSB плоскост 15 мм (цена за м²)",
+      "category": "Дърво и ОСБ",
+      "unit": "м²",
+      "matchNote": "Забележка за съпоставянето: при Gstroy наличният вариант е OSB-2 (обикновен, не влагоустойчив), докато Praktiker и HomeMax предлагат OSB-3 (влагоустойчив) — не са напълно еднакъв клас плоскост. Inex не продава строителни плоскости (специализиран е основно в инструменти и електроинструменти), затова не участва в това сравнение.",
+      "offers": {
+        "praktiker": {
+          "price": 9.28,
+          "image": "https://api.praktiker.bg/medias/137972.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8MTM0OTYyfGltYWdlL2pwZWd8YURsaEwyaG1OaTh6TURjM01EVTFPVGMzT0RnME5pNXFjR2N8MmUyM2ZjYmQ3MTQyNGI0OTQ3NTZlYjRmYzRiMzc3ZmEzMjk5NWRkNWY2MmU4NDdmZTYxMzIyOTIwOTBmMWUxMg",
+          "url": "https://praktiker.bg/bg/Ploskosti-i-rabotni-plotove/OSB-3-15MM-1250H2500MM-KRONOSPAN-3-125-M2-VLAGOUSTOYChIV/p/137972",
+          "label": "OSB-3 15мм 1250х2500мм (3.125 м²) KRONOSPAN, влагоустойчив — 28.99 €/бр."
+        },
+        "homemax": {
+          "price": 8.85,
+          "image": "https://www.home-max.bg/static/media/ups/products/main/21186516_03916551a.png?v=17.95",
+          "url": "https://www.home-max.bg/osb-3-neshlajfano-15mm-25-56/",
+          "label": "OSB-3 нешлайфано 15мм, 2500х1250мм, влагоустойчив"
+        },
+        "gstroy": {
+          "price": 21.85,
+          "image": "https://assets.gstroy.bg/media/filer_public/1d/3a/1d3a0e97-5445-4735-b5bc-dc070eca7997/13013-image-86e97ec4a4b1ca56059ac2ae4b64249e.jpg",
+          "url": "https://gstroy.bg/product/13013-osb-2-15mm-2440h1220",
+          "label": "ОСБ 2 15мм 2440х1220мм (не влагоустойчив)"
+        }
+      }
+    },
+    {
+      "id": "mazilka-silikonova-b3-25kg",
+      "name": "Силиконова фасадна мазилка, влачена структура, 25 кг",
+      "category": "Бои и лакове",
+      "unit": "кофа",
+      "offers": {
+        "domestico": {
+          "price": 48.056323913632575,
+          "image": "https://res.cloudinary.com/domestico-bg/image/upload/c_lpad,dpr_2.0,f_auto,h_265,q_auto,w_265/v1/media/catalog/product/d/e/deko-silikonova-mazilka-b3-1-670x640_.png?_i=AB",
+          "url": "https://www.domestico.bg/silikonova-mazilka-deko-professional-b3-vlachena-product",
+          "label": "Силиконова мазилка DEKO Professional, B3, влачена структура"
+        }
+      }
+    },
+    {
+      "id": "grund-fasaden-ps112-18kg",
+      "name": "Фасаден грунд за мазилки, 18 кг",
+      "category": "Бои и лакове",
+      "unit": "кофа",
+      "offers": {
+        "domestico": {
+          "price": 139.06627876655946,
+          "image": "https://res.cloudinary.com/domestico-bg/image/upload/c_lpad,dpr_2.0,f_auto,h_265,q_auto,w_265/v1/media/catalog/product/d/e/deko-fasaden-grund-ps112-18kg-545x640_1_.png?_i=AB",
+          "url": "https://www.domestico.bg/bojadisvane/za-stroitelstvo/grundove-za-steni/grund-deko-fcd112-product",
+          "label": "Грунд Deko Professional, фасаден, ПС-112"
         }
       }
     }

@@ -72,17 +72,31 @@ PRODUCTS = {
 }
  
  
-def fetch_page(url: str) -> str:
-    resp = requests.get(url, headers=HEADERS, timeout=15)
-    resp.raise_for_status()
- 
-    # Оставено за debug — презаписва се на всяка заявка, така че пази
-    # само последната изтеглена страница. Полезно е при настройване на
-    # селектора в parse_price(), но не е нужно за нормална работа.
-    with open("test.html", "w", encoding="utf-8") as f:
-        f.write(resp.text)
- 
-    return resp.text
+def fetch_page(url: str, attempts: int = 3) -> str:
+    """Praktiker понякога отговаря бавно на отделни продуктови страници
+    (видяно на живо: "Read timed out" при SAMORAZLIVNA-ZAMAZKA-CN-68,
+    докато всички други продукти минават нормално) — най-вероятно моментно
+    претоварване на техния сървър, не постоянен проблем с конкретния URL.
+    Затова: до `attempts` опита с нарастващ timeout, вместо целият продукт
+    да отпадне заради една бавна секунда."""
+    last_error = None
+    for attempt in range(1, attempts + 1):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=15 + attempt * 10)
+            resp.raise_for_status()
+
+            # Оставено за debug — презаписва се на всяка заявка, така че пази
+            # само последната изтеглена страница. Полезно е при настройване на
+            # селектора в parse_price(), но не е нужно за нормална работа.
+            with open("test.html", "w", encoding="utf-8") as f:
+                f.write(resp.text)
+
+            return resp.text
+        except requests.exceptions.RequestException as e:
+            last_error = e
+            if attempt < attempts:
+                time.sleep(2 * attempt)  # кратка пауза преди следващия опит
+    raise last_error
  
  
 # Ключови думи, по които разпознаваме, че даден ценови ред е за ОПАКОВКА

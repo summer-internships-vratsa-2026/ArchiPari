@@ -72,6 +72,17 @@ PRODUCTS = {
         "unit": "брой",
         "label": "ВИНТОВЕРТ АКУМ. БОШ GSR 18V-50 2х2.0Ah",
     },
+    "osb-plocha-15mm": {
+        "url": f"{BASE_URL}/product/13013-osb-2-15mm-2440h1220",
+        "name": "OSB плоскост 15 мм (цена за м²)",
+        "category": "Дърво и ОСБ",
+        "unit": "м²",
+        "label": "ОСБ 2 15мм 2440х1220мм (не влагоустойчив)",
+        # Тази оферта досега стоеше ръчно вкарана в data/products.json,
+        # без снимка (image: null) — защото изобщо не беше в PRODUCTS тук,
+        # затова run_all.py никога не я презаписваше. Сега влиза в
+        # автоматичното обхождане и ще си получи og:image като другите.
+    },
     # ... добави останалите продукти тук, по същия модел, след като
     # провериш в браузъра реалната продуктова страница на gstroy.bg.
 }
@@ -140,14 +151,26 @@ def _extract_price_bgn(text: str) -> float | None:
 
 def fetch_rendered_price(playwright, url: str) -> float | None:
     """Отваря страницата с headless Chromium, изчаква JS рендирането на
-    цената и я връща в евро."""
+    цената и я връща в евро.
+
+    GStroy понякога държи фонови мрежови заявки отворени за постоянно
+    (chat widget, tracking пиксели и т.н.), заради което "networkidle"
+    никога не се задейства и page.goto() гърми с Timeout — виж грешката
+    при zamazka-samorazlivna-25kg. Затова: първи опит с networkidle
+    (по-сигурен, когато проработи), а при timeout — втори опит само с
+    domcontentloaded + ръчно изчакване, вместо целият продукт да пропадне."""
     browser = playwright.chromium.launch(headless=True)
     try:
         page = browser.new_page(user_agent=HEADERS["User-Agent"])
-        page.goto(url, wait_until="networkidle", timeout=20000)
-        # Допълнителна кратка пауза - някои цени се зареждат с малко
-        # закъснение след networkidle (напр. отделен AJAX за наличност).
-        page.wait_for_timeout(1500)
+        try:
+            page.goto(url, wait_until="networkidle", timeout=20000)
+        except Exception:
+            page.goto(url, wait_until="domcontentloaded", timeout=20000)
+            # Без networkidle като сигнал, изчакваме ръчно JS-ът да успее
+            # да вкара цената в DOM-а.
+            page.wait_for_timeout(4000)
+        else:
+            page.wait_for_timeout(1500)
         text = page.inner_text("body")
         return _extract_price_bgn(text)
     finally:
