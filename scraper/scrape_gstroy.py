@@ -51,20 +51,11 @@ PRODUCTS = {
         "unit": "чувал",
         "label": "ЦИМЕНТ 25кг ВАРОВИК ХОЛСИМ Н42.5 (CEM II/A-LL 42.5N)",
     },
-    "zamazka-samorazlivna-25kg": {
-        "url": f"{BASE_URL}/product/13303-samorazlivna-zamazka-cn68-25kg",
-        "name": "Саморазливна замазка, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "САМОРАЗЛИВНА ЗАМАЗКА CN68 25кг",
-    },
-    "hidroizolacia-kristalizirashta-25kg": {
-        "url": f"{BASE_URL}/product/12883-hidroizolacija-kristalizirashta-cr-90-25kg",
-        "name": "Хидроизолация кристализираща, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "ХИДРОИЗОЛАЦИЯ КРИСТАЛИЗИРАЩА CR 90 25кг",
-    },
+    # ЗАБЕЛЕЖКА: zamazka-samorazlivna-25kg и hidroizolacia-kristalizirashta-25kg
+    # бяха премахнати оттук — категория "Цимент и бетон" се преизгражда само
+    # с 3 нови вида продукта. Замазката (Ceresit CN68, url:
+    # 13303-samorazlivna-zamazka-cn68-25kg) ще се добави отново при новите
+    # изисквания (Ceresit DA 25 kg) — засега умишлено я няма.
     "vintovertka-akum-18v": {
         "url": f"{BASE_URL}/product/63411-vintovert-akum-bosh-gsr-18v-50-2h20ah",
         "name": "Акумулаторна винтоверта 18V, 2 батерии",
@@ -99,17 +90,34 @@ HEADERS = {
 _PRICE_BGN_RE = re.compile(r"(\d[\d\s]*[.,]\d{2})\s*лв", re.IGNORECASE)
 
 
-def fetch_static_html(url: str) -> str:
+def fetch_static_html(url: str, attempts: int = 3) -> str:
     """Обикновена HTTP заявка - достатъчна за снимката (og:image), която
-    Е налична в статичния HTML (за разлика от цената)."""
-    resp = requests.get(url, headers=HEADERS, timeout=15)
-    resp.raise_for_status()
+    Е налична в статичния HTML (за разлика от цената).
 
-    # Debug: пази последната изтеглена страница за проверка на маркъпа.
-    with open("test.html", "w", encoding="utf-8") as f:
-        f.write(resp.text)
+    Забелязано на живо: GStroy понякога отговаря бавно на отделни
+    продуктови страници в рамките на един run (напр. hidroizolacia и
+    vintovertka-akum-18v гръмнаха с "Read timed out" при timeout=15,
+    докато другите 3 продукта минаха нормално) — вероятно моментно
+    натоварване от сървъра им при последователни заявки, не постоянен
+    проблем с конкретния URL. Затова: до `attempts` опита с нарастващ
+    timeout, вместо целият продукт (вкл. снимката му) да отпадне заради
+    една бавна заявка."""
+    last_error = None
+    for attempt in range(1, attempts + 1):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=15 + attempt * 10)
+            resp.raise_for_status()
 
-    return resp.text
+            # Debug: пази последната изтеглена страница за проверка на маркъпа.
+            with open("test.html", "w", encoding="utf-8") as f:
+                f.write(resp.text)
+
+            return resp.text
+        except requests.exceptions.RequestException as e:
+            last_error = e
+            if attempt < attempts:
+                time.sleep(2 * attempt)  # кратка пауза преди следващия опит
+    raise last_error
 
 
 def parse_image(html: str) -> str | None:

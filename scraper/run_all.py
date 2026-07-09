@@ -21,13 +21,14 @@ import scrape_homemax
 import scrape_inex
 import scrape_gstroy
 import scrape_domestico
+import scrape_bauhaus
 SCRAPER_MODULES = [
     "scrape_praktiker",
     "scrape_homemax",
     "scrape_inex",
     "scrape_gstroy",
     "scrape_domestico",
-    # "scrape_bauhaus",
+    "scrape_bauhaus",
 ]
  
 BG_TZ = timezone(timedelta(hours=3))  # лятно часово време; смени на +2 през зимата или ползвай zoneinfo

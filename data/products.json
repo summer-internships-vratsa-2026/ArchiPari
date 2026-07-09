@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T10:54:36.660471+03:00",
+  "lastUpdated": "2026-07-09T09:42:40.654557+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -25,6 +25,11 @@
       "id": "domestico",
       "name": "Domestico",
       "url": "https://www.domestico.bg"
+    },
+    {
+      "id": "bauhaus",
+      "name": "Bauhaus",
+      "url": "https://bauhaus.bg"
     }
   ],
   "categories": [
@@ -40,7 +45,7 @@
   "products": [
     {
       "id": "cement-42-5-25kg",
-      "name": "Цимент 42.5, 25 кг",
+      "name": "Портланд цимент CEM II 42.5R, 25 кг",
       "category": "Цимент и бетон",
       "unit": "чувал",
       "offers": {
@@ -67,29 +72,15 @@
           "image": "https://assets.gstroy.bg/media/filer_public/81/4b/814b9237-0b36-4324-9024-17d5195d35b7/13381-image-10200040013.jpg",
           "url": "https://gstroy.bg/product/13381-ciment-25kg-varovik-holsim-n42-5",
           "label": "ЦИМЕНТ 25кг ВАРОВИК ХОЛСИМ Н42.5 (CEM II/A-LL 42.5N)"
+        },
+        "bauhaus": {
+          "price": 5.95,
+          "image": "https://bauhaus.bg/img/242782/640/640/4.mockup-Devnya-Premium-evoBUILD-LEFT_web.png",
+          "url": "https://bauhaus.bg/ciment-devnya-premium-cem-ii-a-ll-425-r/p/9971",
+          "label": "Цимент Devnya Premium CEM II/A-LL 42,5 R, 25 кг"
         }
       },
-      "matchNote": "Забележка за съпоставянето: продуктите не са идентични между магазините. При Praktiker е клас 42.5R (HOLCIM), а при HomeMax наличният еквивалент е клас 42.5N (TITAN) - близки, но не абсолютно същите характеристики. Показани са само магазините, при които намерихме реален, наличен продукт."
-    },
-    {
-      "id": "beton-suha-smes-25kg",
-      "name": "Готова бетонова смес, 25 кг",
-      "category": "Цимент и бетон",
-      "unit": "чувал",
-      "offers": {
-        "praktiker": {
-          "price": 4.19,
-          "image": "https://api.praktiker.bg/medias/476278.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8NzU3NTZ8aW1hZ2UvanBlZ3xhRGN4TDJoalpDOHhNVFV5TnpNeU1qZzVORE0yTmk1cWNHY3xkZmU3N2Q3YzYyMmQyZjBkNTg5N2VjODZhNWQ2ZDIzM2M5Njg0YTE3NDY4NWMwZjgxYzk3OTZjZjhiNDA5YTZl",
-          "url": "https://www.praktiker.bg/Tziment-i-preobrazuvateli/BETON--SUH-RAZTVOR-ZA-BETONIRANE-BAUMIT/p/476278",
-          "label": "БЕТОН СУХ РАЗТВОР ЗА БЕТОНИРАНЕ BAUMIT, 25 кг"
-        },
-        "homemax": {
-          "price": 3.45,
-          "image": "https://www.home-max.bg/static/media/ups/products/main/22815798.png?v=17.95",
-          "url": "https://www.home-max.bg/beton-baumit-25-kg/",
-          "label": "Бетон Baumit, 25 кг"
-        }
-      }
+      "matchNote": "Забележка за съпоставянето: Praktiker, Inex и Bauhaus продават истински клас 42.5R (съответно Holcim CEM II/B-LL, Devnya Premium CEM II/A-LL, Devnya Premium CEM II/A-LL). При GStroy и HomeMax проверихме на живо — и двата предлагат само клас 42.5N (GStroy: Holcim CEM II/A-LL 42.5N; HomeMax: R-класовете им в момента са изчерпани, затова показваме наличния Bravo/Titan 42.5N). Domestico изобщо не продава цимент, бетон или замазки — каталогът им е фокусиран върху бои и мазилки (DEKO/Оргахим), затова няма оферта от тях тук."
     },
     {
       "id": "gipsokarton-12-5-standart",
@@ -144,10 +135,16 @@
           "label": "Акумулаторен винтоверт Metabo BS18L, 18V, 2 батерии, зарядно и куфар"
         },
         "gstroy": {
-          "price": 274.87,
+          "price": 199.0,
           "image": "https://assets.gstroy.bg/media/filer_public/5c/36/5c3697d6-34db-4270-92f1-f50dbd5d8378/homegsstroimstroimarket_pythonmediaftp_images30500150129_-_web.jpg",
           "url": "https://gstroy.bg/product/63411-vintovert-akum-bosh-gsr-18v-50-2h20ah",
           "label": "ВИНТОВЕРТ АКУМ. БОШ GSR 18V-50 2х2.0Ah"
+        },
+        "bauhaus": {
+          "price": 149.0,
+          "image": "https://bauhaus.bg/img/168308/640/640/60748809.jpg",
+          "url": "https://bauhaus.bg/akumulatoren-vintovert-hikoki-ds18df/p/135182",
+          "label": "Акумулаторен винтоверт HiKOKI DS18DF, 18V, 2 батерии 2Ah, зарядно и куфар"
         }
       }
     },
@@ -186,71 +183,6 @@
       }
     },
     {
-      "id": "zamazka-samorazlivna-25kg",
-      "name": "Саморазливна замазка, 25 кг",
-      "category": "Цимент и бетон",
-      "unit": "чувал",
-      "offers": {
-        "praktiker": {
-          "price": 14.31,
-          "image": "https://api.praktiker.bg/medias/436778.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8MzA5Njd8aW1hZ2UvanBlZ3xhRFF6TDJoa05pODVNekl3TXpjMk1EQTROek0wTG1wd1p3fDFkMmU4ZmY5N2RlYmM2OTlhZjM2NWNhODk3NDgzZTlhZWQ3NzRjYWJhMDM0YzMxODA1NzJlOWVlMTNmYmI4OTE",
-          "url": "https://www.praktiker.bg/Podovi-zamazki/SAMORAZLIVNA-ZAMAZKA-OT-2-DO-20-MM-CERESIT-CN-68/p/436778",
-          "label": "САМОРАЗЛИВНА ЗАМАЗКА ОТ 2 ДО 20 MM CERESIT CN 68"
-        },
-        "homemax": {
-          "price": 14.82,
-          "image": "https://www.home-max.bg/static/media/ups/products/main/23050068_1.jpg?v=17.95",
-          "url": "https://www.home-max.bg/samorazlivna-zamazka-ceresit-cn68-25-kg/",
-          "label": "Саморазливна замазка Ceresit CN68 25 кг"
-        },
-        "inex": {
-          "price": 8.7,
-          "image": "https://inex-bg.com/media/22.04.2026/baumit-alfa-2000-25kg-zamazka-samorazlivna-48-br-p-0000056327-0000056327-1-tm.png",
-          "url": "https://inex-bg.com/p/baumit-alfa-2000-25kg-zamazka-samorazlivna-48-br-p-0000056327",
-          "label": "Саморазливна замазка Алфа 2000, Baumit, 25 кг"
-        },
-        "gstroy": {
-          "price": 14.25,
-          "image": "https://assets.gstroy.bg/media/filer_public/2e/71/2e71f0d7-64d0-44a7-9f49-353049b97dac/13303-image-11000010018.jpg",
-          "url": "https://gstroy.bg/product/13303-samorazlivna-zamazka-cn68-25kg",
-          "label": "САМОРАЗЛИВНА ЗАМАЗКА CN68 25кг"
-        }
-      }
-    },
-    {
-      "id": "hidroizolacia-kristalizirashta-25kg",
-      "name": "Хидроизолация кристализираща, 25 кг",
-      "category": "Цимент и бетон",
-      "unit": "чувал",
-      "offers": {
-        "praktiker": {
-          "price": 23.99,
-          "image": "https://api.praktiker.bg/medias/435855.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8MzY0Mjd8aW1hZ2UvanBlZ3xhRFJpTDJnek5TODVNalExTnpJd09ETTRNVGMwTG1wd1p3fDI1YjVjOWExZmVlYjE4MTJlN2Q1ZDI2ZWJhZWIzZDAzMjYzY2E2MTlhYzZlYjk3YmM0MmJlZmQ0MjhjMzhiMDI",
-          "url": "https://www.praktiker.bg/Hidroizolaciya-za-bani-i-terasi/KRISTALIZIRAShtA--HIDROIZOLATzIYa--ShLAM-CERESIT-CR-90/p/435855",
-          "label": "КРИСТАЛИЗИРАЩА ХИДРОИЗОЛАЦИЯ, ШЛАМ CERESIT CR 90"
-        },
-        "homemax": {
-          "price": 27.09,
-          "image": "https://www.home-max.bg/static/media/ups/products/main/22601292_1.jpg?v=17.95",
-          "url": "https://www.home-max.bg/cr90-25kg-hidroizolaciya/",
-          "label": "CR90 25кг хидроизолация"
-        },
-        "inex": {
-          "price": 13.1,
-          "image": "https://inex-bg.com/media/06.04.2026/tkk-tekadom-hidroblokers-7-kg-superel-hidr-24644-sm22467-sm22467-1-tm.jpg",
-          "url": "https://inex-bg.com/p/tkk-tekadom-hidroblokers-7-kg-superel-hidr-24644-sm22467",
-          "label": "Хидроизолационна мазилка TKK HydroBlocker Hidroizol S, 7 кг"
-        },
-        "gstroy": {
-          "price": 29.16,
-          "image": "https://assets.gstroy.bg/media/filer_public/c2/53/c253e4a5-5cee-43cf-87d5-546cb386f157/12883-image-10500210002.jpg",
-          "url": "https://gstroy.bg/product/12883-hidroizolacija-kristalizirashta-cr-90-25kg",
-          "label": "ХИДРОИЗОЛАЦИЯ КРИСТАЛИЗИРАЩА CR 90 25кг"
-        }
-      },
-      "matchNote": "Забележка за съпоставянето: при Inex няма наличен Ceresit CR90 (25 кг) — най-близкият реален продукт е хидроизолационна мазилка TKK HydroBlocker Hidroizol S, но в МНОГО по-малка опаковка (7 кг вместо 25 кг). Цената на Inex по-долу НЕ е сравнима на килограм с другите 3 магазина — не приемай я за \"най-евтина\", без сам да пределиш цена/кг."
-    },
-    {
       "id": "osb-plocha-15mm",
       "name": "OSB плоскост 15 мм (цена за м²)",
       "category": "Дърво и ОСБ",
@@ -270,7 +202,7 @@
           "label": "OSB-3 нешлайфано 15мм, 2500х1250мм, влагоустойчив"
         },
         "gstroy": {
-          "price": 21.85,
+          "price": 19.69,
           "image": "https://assets.gstroy.bg/media/filer_public/1d/3a/1d3a0e97-5445-4735-b5bc-dc070eca7997/13013-image-86e97ec4a4b1ca56059ac2ae4b64249e.jpg",
           "url": "https://gstroy.bg/product/13013-osb-2-15mm-2440h1220",
           "label": "ОСБ 2 15мм 2440х1220мм (не влагоустойчив)"

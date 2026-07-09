@@ -40,33 +40,18 @@ PRODUCTS = {
         "unit": "м²",
         "label": "3D MDF ламперия Krono Original Kronowall, дъб Сандан",
     },
-    "beton-suha-smes-25kg": {  # <- същото id във всички скрапери за този продукт!
-        "url": f"{BASE_URL}/Tziment-i-preobrazuvateli/BETON--SUH-RAZTVOR-ZA-BETONIRANE-BAUMIT/p/476278",
-        "name": "Готова бетонова смес, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "БЕТОН СУХ РАЗТВОР ЗА БЕТОНИРАНЕ BAUMIT, 25 кг",
-    },
+    # ЗАБЕЛЕЖКА: beton-suha-smes-25kg, zamazka-samorazlivna-25kg и
+    # hidroizolacia-kristalizirashta-25kg бяха премахнати оттук — категория
+    # "Цимент и бетон" се преизгражда само с 3 нови вида продукта (Портланд
+    # цимент CEM II 42.5R, Сух бетон B20, Саморазливна подова замазка).
+    # Саморазливната замазка ще се добави отново, когато е готова с новите
+    # изисквания (Weberfloor 4010 25 kg) — засега умишлено я няма.
     "cement-42-5-25kg": {
         "url": f"{BASE_URL}/Tziment-i-preobrazuvateli/TzIMENT-HOLCIM-TzIMENT-CEM-II-B-LL-42-5R/p/496669",
         "name": "Цимент 42.5, 25 кг",
         "category": "Цимент и бетон",
         "unit": "чувал",
         "label": "ЦИМЕНТ HOLCIM ЦИМЕНТ CEM II/B-LL 42.5R",
-    },
-    "zamazka-samorazlivna-25kg": {
-        "url": f"{BASE_URL}/Podovi-zamazki/SAMORAZLIVNA-ZAMAZKA-OT-2-DO-20-MM-CERESIT-CN-68/p/436778",
-        "name": "Саморазливна замазка, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "САМОРАЗЛИВНА ЗАМАЗКА ОТ 2 ДО 20 MM CERESIT CN 68",
-    },
-    "hidroizolacia-kristalizirashta-25kg": {
-        "url": f"{BASE_URL}/Hidroizolaciya-za-bani-i-terasi/KRISTALIZIRAShtA--HIDROIZOLATzIYa--ShLAM-CERESIT-CR-90/p/435855",
-        "name": "Хидроизолация кристализираща, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "КРИСТАЛИЗИРАЩА ХИДРОИЗОЛАЦИЯ, ШЛАМ CERESIT CR 90",
     },
     "vintovertka-akum-18v": {
         # ПОПРАВЕНО: старият URL сочеше към "АКУМУЛАТОРНА УДАРНА БОРМАШИНА"

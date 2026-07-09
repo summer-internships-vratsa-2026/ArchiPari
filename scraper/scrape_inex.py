@@ -66,24 +66,11 @@ PRODUCTS = {
         "unit": "чувал",
         "label": "Цимент Premium Devnya 42.5R 25 кг.",
     },
-    "zamazka-samorazlivna-25kg": {
-        "url": f"{BASE_URL}/p/baumit-alfa-2000-25kg-zamazka-samorazlivna-48-br-p-0000056327",
-        "name": "Саморазливна замазка, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "Саморазливна замазка Алфа 2000, Baumit, 25 кг",
-    },
-    "hidroizolacia-kristalizirashta-25kg": {
-        # ЗАБЕЛЕЖКА: Inex не продава директно Ceresit CR90 (25кг) — най-близкият
-        # реален еквивалент е хидроизолационна мазилка на циментова основа,
-        # но в по-малка опаковка (7 кг вместо 25 кг). Виж matchNote в
-        # products.json за този продукт.
-        "url": f"{BASE_URL}/p/tkk-tekadom-hidroblokers-7-kg-superel-hidr-24644-sm22467",
-        "name": "Хидроизолация кристализираща, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "Хидроизолационна мазилка TKK HydroBlocker Hidroizol S, 7 кг",
-    },
+    # ЗАБЕЛЕЖКА: zamazka-samorazlivna-25kg и hidroizolacia-kristalizirashta-25kg
+    # бяха премахнати оттук — категория "Цимент и бетон" се преизгражда само
+    # с 3 нови вида продукта. Замазката (Baumit Alfa 2000, url:
+    # baumit-alfa-2000-25kg-zamazka-samorazlivna-48-br-p-0000056327) ще се
+    # добави отново при новите изисквания — засега умишлено я няма.
     # ... добави останалите продукти тук, по същия модел, след като
     # провериш в браузъра, че inex-bg.com има разумен еквивалент.
 }

@@ -43,27 +43,11 @@ PRODUCTS = {
         "unit": "чувал",
         "label": "Цимент Bravo 42,5 N торби по 25 кг Девня",
     },
-    "beton-suha-smes-25kg": {  # <- същото id като в scrape_praktiker.py!
-        "url": f"{BASE_URL}/beton-baumit-25-kg/",
-        "name": "Готова бетонова смес, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "Бетон Baumit, 25 кг",
-    },
-    "zamazka-samorazlivna-25kg": {  # <- същото id като в scrape_praktiker.py!
-        "url": f"{BASE_URL}/samorazlivna-zamazka-ceresit-cn68-25-kg/",
-        "name": "Саморазливна замазка, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "Саморазливна замазка Ceresit CN68 25 кг",
-    },
-    "hidroizolacia-kristalizirashta-25kg": {  # <- същото id като в scrape_praktiker.py!
-        "url": f"{BASE_URL}/cr90-25kg-hidroizolaciya/",
-        "name": "Хидроизолация кристализираща, 25 кг",
-        "category": "Цимент и бетон",
-        "unit": "чувал",
-        "label": "CR90 25кг хидроизолация",
-    },
+    # ЗАБЕЛЕЖКА: beton-suha-smes-25kg, zamazka-samorazlivna-25kg и
+    # hidroizolacia-kristalizirashta-25kg бяха премахнати оттук — категория
+    # "Цимент и бетон" се преизгражда само с 3 нови вида продукта. Замазката
+    # (Ceresit CN68, url: samorazlivna-zamazka-ceresit-cn68-25-kg) ще се
+    # добави отново при новите изисквания — засега умишлено я няма.
     "vintovertka-akum-18v": {  # <- същото id като в scrape_praktiker.py!
         "url": f"{BASE_URL}/akumulatoren-vintovert-bosch-universaldrill-18v-2-1-5-ah/",
         "name": "Акумулаторна винтоверта 18V, 2 батерии",
