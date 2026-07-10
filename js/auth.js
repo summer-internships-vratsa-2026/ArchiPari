@@ -6,7 +6,7 @@
 // за точните стъпки как да си създадеш безплатен Supabase проект.
 // SUPABASE_ANON_KEY е ПУБЛИЧЕН ключ по дизайн (не е тайна) — нормално е
 // да стои във фронтенд кода, не е нужно да се крие в environment variable.
-const SUPABASE_URL = "https://xfvdcnldnolrmiuqfzej.supabase.co/rest/v1/"; // TODO
+const SUPABASE_URL = "https://xfvdcnldnolrmiuqfzej.supabase.co"; // TODO
 const SUPABASE_ANON_KEY = "sb_publishable_xEt1q9EN7ThuUHVadTVjXw_qnJYD2gy"; // TODO
 
 (function () {
