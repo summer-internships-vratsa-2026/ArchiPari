@@ -27,6 +27,13 @@ HEADERS = {
 # "name", "category" и "unit" се ползват само за автоматично създаване
 # на нов продукт в data/products.json, ако той още го няма там.
 PRODUCTS = {
+    "mazilka-silikonova-d15-draskana-25kg": {
+        "url": f"{BASE_URL}/Mazilki/SILIKONOVA-MAZILKA-DRASKANA-D1-5-DEKO-Professional/p/471751",
+        "name": "Силиконова мазилка D1,5, драскана, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "СИЛИКОНОВА МАЗИЛКА ДРАСКАНА Д1.5 DEKO Professional, 25 кг",
+    },
     "pvc-lamperiya-wood": {
         # ЗАБЕЛЕЖКА: продуктовото "name" тук е material-неутрално нарочно —
         # реалният продукт е 3D MDF ламперия (не PVC!), докато при HomeMax

@@ -64,6 +64,13 @@ BGN_PER_EUR = 1.95583
 # Проверени на живо реални продуктови страници (юли 2026, виж бележката
 # по-горе защо тези 2, а не общите 4 продукта).
 PRODUCTS = {
+    "mazilka-silikonova-d15-draskana-25kg": {
+        "url": f"{BASE_URL}/silikonova-mazilka-deko-professional-d1-5-draskana-product",
+        "name": "Силиконова мазилка D1,5, драскана, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "Силиконова мазилка DEKO Professional, D1.5, драскана структура",
+    },
     "mazilka-silikonova-b3-25kg": {
         "url": f"{BASE_URL}/silikonova-mazilka-deko-professional-b3-vlachena-product",
         "name": "Силиконова фасадна мазилка, влачена структура, 25 кг",

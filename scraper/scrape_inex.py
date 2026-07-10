@@ -45,6 +45,15 @@ HEADERS = {
 # цимент/гипсокартон/плочки и т.н. провери какво предлага inex-bg.com,
 # преди да добавяш нови редове — може изобщо да няма съответствие.
 PRODUCTS = {
+    "mazilka-silikonova-d15-draskana-25kg": {
+        # ЗАБЕЛЕЖКА: Inex продава Ceresit CT 74 (не DEKO Professional D1.5
+        # като повечето други магазини) — виж matchNote в data/products.json.
+        "url": f"{BASE_URL}/p/tserezit-st-74-sil-mazilka-1-5mm-25kg-tsv-grupa-a-sm23505",
+        "name": "Силиконова мазилка D1,5, драскана, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "Силиконова мазилка Ceresit CT 74 1.5 мм 25 кг",
+    },
     "perforator-sds-plus": {
         "url": f"{BASE_URL}/p/190996",
         "name": "Перфоратор SDS-Plus, 800 W",

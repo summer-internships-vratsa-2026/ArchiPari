@@ -45,6 +45,13 @@ HEADERS = {
 }
 
 PRODUCTS = {
+    "mazilka-silikonova-d15-draskana-25kg": {
+        "url": f"{BASE_URL}/silikonova-mazilka-deko-professional-d15/p/23650",
+        "name": "Силиконова мазилка D1,5, драскана, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "Силиконова мазилка Deko Professional D1,5, 25 кг, бяла, драскана",
+    },
     "cement-42-5-25kg": {  # <- същото id във всички скрапери за този продукт!
         # ЗАМЕНЕНО: старата оферта (Bravo CEM II/B-M 42,5N) не отговаряше
         # на изисквания клас 42.5R. Devnya Premium CEM II/A-LL 42,5R е

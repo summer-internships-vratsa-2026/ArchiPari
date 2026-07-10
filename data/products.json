@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T08:43:46.326485+03:00",
+  "lastUpdated": "2026-07-10T10:20:53.875257+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -234,6 +234,51 @@
           "image": "https://res.cloudinary.com/domestico-bg/image/upload/c_lpad,dpr_2.0,f_auto,h_265,q_auto,w_265/v1/media/catalog/product/d/e/deko-fasaden-grund-ps112-18kg-545x640_1_.png?_i=AB",
           "url": "https://www.domestico.bg/bojadisvane/za-stroitelstvo/grundove-za-steni/grund-deko-fcd112-product",
           "label": "Грунд Deko Professional, фасаден, ПС-112"
+        }
+      }
+    },
+    {
+      "id": "mazilka-silikonova-d15-draskana-25kg",
+      "name": "Силиконова мазилка D1,5, драскана, 25kg",
+      "category": "Бои и лакове",
+      "unit": "кофа",
+      "matchNote": "Забележка за съпоставянето: при Praktiker, Bauhaus, HomeMax и Domestico продуктът е директно DEKO Professional D1.5 (една и съща марка/линия). При Inex е Ceresit CT 74, а при GStroy — DEKO T8500 Д1.5 (различни марки/линии на същата чичия силиконова мазилка с драскана структура 1.5мм, 25кг) — сравними по предназначение, но не идентичен продукт.",
+      "offers": {
+        "praktiker": {
+          "price": 54.99,
+          "image": "https://api.praktiker.bg/medias/471751.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8OTg5NTN8aW1hZ2UvanBlZ3xhR0ppTDJnNE9TOHlPVEF3TmpZek1qSTFOVFV4T0M1cWNHY3w1YjA1OTQ4MzhjMDAzZWYxMDg3NDE5ZmZlNjJjODcyY2RkZjAwMjY1NzhkNjJmZmFmNTM1Zjg0ZmI3MmY1ODg2",
+          "url": "https://www.praktiker.bg/Mazilki/SILIKONOVA-MAZILKA-DRASKANA-D1-5-DEKO-Professional/p/471751",
+          "label": "СИЛИКОНОВА МАЗИЛКА ДРАСКАНА Д1.5 DEKO Professional, 25 кг"
+        },
+        "bauhaus": {
+          "price": 49.95,
+          "image": "https://bauhaus.bg/img/143221/640/640/60315762.jpg",
+          "url": "https://bauhaus.bg/silikonova-mazilka-deko-professional-d15/p/23650",
+          "label": "Силиконова мазилка Deko Professional D1,5, 25 кг, бяла, драскана"
+        },
+        "gstroy": {
+          "price": 50.57,
+          "image": "https://assets.gstroy.bg/media/filer_public/fc/ea/fcead5b2-e646-4473-a297-42128f0fd1d3/10600070169_web.jpg",
+          "url": "https://gstroy.bg/product/14835-mazilka-silikonova-orgahim-d1-5-25kg",
+          "label": "МАЗИЛКА СИЛИКОНОВА DEKO T 8500 Д1.5 25кг"
+        },
+        "inex": {
+          "price": 60.0,
+          "image": "https://inex-bg.com/media/22.05.2026/tserezit-st-74-sil-mazilka-1-5mm-25kg-tsv-grupa-a-sm23505-sm23505-1-tm.jpg",
+          "url": "https://inex-bg.com/p/tserezit-st-74-sil-mazilka-1-5mm-25kg-tsv-grupa-a-sm23505",
+          "label": "Силиконова мазилка Ceresit CT 74 1.5 мм 25 кг"
+        },
+        "homemax": {
+          "price": 55.73,
+          "image": "https://www.home-max.bg/static/media/ups/products/main/24302586.jpg?v=17.99",
+          "url": "https://www.home-max.bg/silikonova-mazilka-deko-professional-d1-5-25-kg-byala/",
+          "label": "Силиконова мазилка Deko Professional D1.5 25 кг бяла"
+        },
+        "domestico": {
+          "price": 48.056323913632575,
+          "image": "https://res.cloudinary.com/domestico-bg/image/upload/c_lpad,dpr_2.0,f_auto,h_265,q_auto,w_265/v1/media/catalog/product/d/e/deko-silikonova-mazilka-d1.5.png?_i=AB",
+          "url": "https://www.domestico.bg/silikonova-mazilka-deko-professional-d1-5-draskana-product",
+          "label": "Силиконова мазилка DEKO Professional, D1.5, драскана структура"
         }
       }
     }

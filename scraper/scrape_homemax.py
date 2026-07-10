@@ -36,6 +36,13 @@ HEADERS = {
 # Ако продуктът се продава на брой/чувал като цяло (напр. чувал цимент),
 # просто НЕ задавай "unit_size" — цената на опаковката си Е базовата.
 PRODUCTS = {
+    "mazilka-silikonova-d15-draskana-25kg": {
+        "url": f"{BASE_URL}/silikonova-mazilka-deko-professional-d1-5-25-kg-byala/",
+        "name": "Силиконова мазилка D1,5, драскана, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "Силиконова мазилка Deko Professional D1.5 25 кг бяла",
+    },
     "cement-42-5-25kg": {  # <- същото id като в scrape_praktiker.py!
         "url": f"{BASE_URL}/ciment-bravo-42-5-n-torbi-po-25-kg-devnya/",
         "name": "Цимент 42.5, 25 кг",

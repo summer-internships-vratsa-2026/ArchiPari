@@ -44,6 +44,15 @@ BASE_URL = "https://gstroy.bg"
 # при които намерих разумен еквивалент - виж бележката в README.md за
 # принципа "по-малко, но коректни съпоставки".
 PRODUCTS = {
+    "mazilka-silikonova-d15-draskana-25kg": {
+        # ЗАБЕЛЕЖКА: GStroy продава DEKO T8500 (не "DEKO Professional D1.5"
+        # като повечето други магазини) — виж matchNote в data/products.json.
+        "url": f"{BASE_URL}/product/14835-mazilka-silikonova-orgahim-d1-5-25kg",
+        "name": "Силиконова мазилка D1,5, драскана, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "МАЗИЛКА СИЛИКОНОВА DEKO T 8500 Д1.5 25кг",
+    },
     "cement-42-5-25kg": {
         "url": f"{BASE_URL}/product/13381-ciment-25kg-varovik-holsim-n42-5",
         "name": "Цимент 42.5, 25 кг",
