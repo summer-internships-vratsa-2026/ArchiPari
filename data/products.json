@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T09:42:40.654557+03:00",
+  "lastUpdated": "2026-07-10T08:43:46.326485+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -57,7 +57,7 @@
         },
         "homemax": {
           "price": 5.62,
-          "image": "https://www.home-max.bg/static/media/ups/products/main/04031086.jpg?v=17.95",
+          "image": "https://www.home-max.bg/static/media/ups/products/main/04031086.jpg?v=17.99",
           "url": "https://www.home-max.bg/ciment-bravo-42-5-n-torbi-po-25-kg-devnya/",
           "label": "Цимент Bravo 42,5 N торби по 25 кг Девня"
         },
@@ -124,7 +124,7 @@
         },
         "homemax": {
           "price": 122.2,
-          "image": "https://www.home-max.bg/static/media/ups/products/main/06054304 UniversalDrill18.jpg?v=17.95",
+          "image": "https://www.home-max.bg/static/media/ups/products/main/06054304 UniversalDrill18.jpg?v=17.99",
           "url": "https://www.home-max.bg/akumulatoren-vintovert-bosch-universaldrill-18v-2-1-5-ah/",
           "label": "Акумулаторен винтоверт BOSCH UniversalDrill 18V 2x1.5 Ah"
         },

@@ -198,6 +198,10 @@
       ? `<div class="offer-disclaimer">Снимките са тези, показани от всеки магазин — продуктите може леко да се различават.</div>`
       : "";
  
+    const basketControlHtml = window.ArchiPariBasket
+      ? window.ArchiPariBasket.addButtonHtml(p.id)
+      : "";
+
     return `
       <article class="product-card">
         <h3>${p.name}</h3>
@@ -205,7 +209,10 @@
         <ul class="price-list">${rows}</ul>
         ${savingsNote}
         ${noteDiffProduct}
-        <a class="details-link" href="product.html?id=${encodeURIComponent(p.id)}">Пълно сравнение и снимки →</a>
+        <div class="product-card-actions">
+          <a class="details-link" href="product.html?id=${encodeURIComponent(p.id)}">Пълно сравнение и снимки →</a>
+          ${basketControlHtml}
+        </div>
       </article>`;
   }
  

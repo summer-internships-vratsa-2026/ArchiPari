@@ -736,3 +736,294 @@ textarea:focus-visible {
   letter-spacing: 0.3px;
   color: var(--steel-blue);
 }
+/* =========================================================
+   Калкулатор за ремонт — количка и сравнение по обща цена
+   ========================================================= */
+
+/* ---------- Бутон "Добави в количката" (продуктова карта / детайли) ---------- */
+
+.product-card-actions {
+  margin-top: auto;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.product-card-actions .details-link { margin-top: 0; }
+
+.add-to-basket-control { display: flex; align-items: center; }
+
+.add-to-basket-btn {
+  font-family: var(--font-display);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  background: var(--ink);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.add-to-basket-btn:hover { background: var(--steel-blue); }
+
+.add-to-basket-control.in-basket {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--best-green-bg);
+  border: 1px solid var(--best-green);
+  border-radius: 6px;
+  padding: 4px 6px 4px 10px;
+}
+.add-to-basket-control.in-basket .in-basket-check {
+  font-size: 11.5px;
+  color: var(--best-green);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.add-to-basket-control .qty-btn {
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  border: 1px solid var(--best-green);
+  background: var(--white);
+  color: var(--best-green);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.add-to-basket-control .qty-btn:hover { background: var(--best-green); color: var(--white); }
+.add-to-basket-control .qty-value {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  min-width: 16px;
+  text-align: center;
+}
+
+.product-detail-basket { margin-top: 14px; }
+
+/* ---------- Плаващ бар "количка" (всички страници) ---------- */
+
+.floating-basket-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translate(-50%, 120%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  font-size: 14px;
+  z-index: 90;
+  transition: transform 0.2s ease;
+  white-space: nowrap;
+}
+.floating-basket-bar:hover { text-decoration: none; background: var(--steel-blue-dark); }
+.floating-basket-bar.visible { transform: translate(-50%, 0); }
+.floating-basket-bar strong { color: var(--hazard-yellow); }
+.floating-basket-icon { font-size: 17px; }
+.floating-basket-cta {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  border-left: 1px solid rgba(255,255,255,0.25);
+  padding-left: 10px;
+}
+
+/* ---------- Страница на калкулатора (basket.html) ---------- */
+
+.basket-page { padding: 36px 0 90px; }
+
+.basket-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 880px) {
+  .basket-layout { grid-template-columns: 1fr; }
+}
+
+.basket-main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.basket-main-header h2, .basket-side h2 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  margin: 0;
+}
+
+.basket-clear-btn {
+  font-size: 12.5px;
+  color: var(--rust);
+  background: none;
+  border: 1px solid var(--rust);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.basket-clear-btn:hover { background: var(--rust); color: var(--white); }
+
+.basket-items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.basket-item-row {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.basket-item-info { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.basket-item-name {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 14.5px;
+}
+.basket-item-name:hover { color: var(--steel-blue); }
+.basket-item-meta {
+  font-size: 12px;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+}
+
+.basket-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.basket-item-qty .qty-btn {
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--border);
+  background: var(--concrete);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.basket-item-qty .qty-btn:hover { background: var(--concrete-dark); }
+.qty-input {
+  width: 46px;
+  text-align: center;
+  padding: 5px 2px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+}
+
+.basket-remove-btn {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: none;
+  color: #9AA0A6;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.basket-remove-btn:hover { background: rgba(193, 68, 14, 0.1); color: var(--rust); }
+
+.basket-empty {
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}
+
+.basket-summary-note {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin: 0 0 14px;
+}
+
+.store-totals-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.store-total-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.store-total-card.incomplete { opacity: 0.82; }
+.store-total-card.best {
+  border-color: var(--best-green);
+  background: var(--best-green-bg);
+}
+.store-total-card .best-badge {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  margin-left: 0;
+}
+.store-total-card h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+.store-total-coverage {
+  display: inline-block;
+  font-size: 11.5px;
+  font-family: var(--font-mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.store-total-coverage.complete { background: var(--best-green-bg); color: var(--best-green); }
+.store-total-coverage.partial { background: #FBEFD9; color: #8A5A00; }
+.store-total-card.best .store-total-coverage.complete { background: rgba(255,255,255,0.6); }
+
+.store-total-price {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.store-total-card.best .store-total-price { color: var(--best-green); }
+
+.store-total-missing {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+
+.store-total-card .btn-primary {
+  display: inline-block;
+  font-size: 13px;
+  padding: 9px 16px;
+}

@@ -69,6 +69,10 @@
       ? `<div class="savings-note">Спестявате до ${window.ArchiPari.formatEUR(savings)}, ако изберете най-евтината оферта.</div>`
       : "";
  
+    const basketControlHtml = window.ArchiPariBasket
+      ? window.ArchiPariBasket.addButtonHtml(product.id)
+      : "";
+
     const cardsHtml = sorted.map(({ storeId, offer }) =>
       renderOfferCard(offer, storeId, offer.price === bestPrice, product)
     ).join("");
@@ -80,6 +84,7 @@
         <div class="product-meta">${product.category} · за ${product.unit}</div>
         ${matchNoteHtml}
         ${savingsHtml}
+        <div class="product-detail-basket">${basketControlHtml}</div>
       </div>
       <div class="offer-detail-grid">${cardsHtml}</div>`;
   }
