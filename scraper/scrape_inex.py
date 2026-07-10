@@ -62,11 +62,11 @@ PRODUCTS = {
         "label": "Електрически перфоратор Makita HR2670, SDS-Plus, 800 W, 3 J",
     },
     "vintovertka-akum-18v": {
-        "url": f"{BASE_URL}/p/akum-vintovert-metabo-bs18l18v-zaryadnokufar-602321500",
-        "name": "Акумулаторна винтоверта 18V, 2 батерии",
+        "url": f"{BASE_URL}/p/akum-vint-universaldrill18v-60-2x2-0ah-06039d7002-0000073379",
+        "name": "Акумулаторен винтоверт 18V, 2 батерии",
         "category": "Инструменти",
         "unit": "брой",
-        "label": "Акумулаторен винтоверт Metabo BS18L, 18V, 2 батерии, зарядно и куфар",
+        "label": "Акумулаторен винтоверт Bosch UniversalDrill 18V-60, 18V, 2 x 2.0Ah, в куфар",
     },
     "cement-42-5-25kg": {
         "url": f"{BASE_URL}/p/premium-tsiment-devnya-42-5r-25kg-64br-pale-0000070011",

@@ -57,7 +57,7 @@ PRODUCTS = {
     # добави отново при новите изисквания — засега умишлено я няма.
     "vintovertka-akum-18v": {  # <- същото id като в scrape_praktiker.py!
         "url": f"{BASE_URL}/akumulatoren-vintovert-bosch-universaldrill-18v-2-1-5-ah/",
-        "name": "Акумулаторна винтоверта 18V, 2 батерии",
+        "name": "Акумулаторен винтоверт 18V, 2 батерии",
         "category": "Инструменти",
         "unit": "брой",
         "label": "Акумулаторен винтоверт BOSCH UniversalDrill 18V 2x1.5 Ah",

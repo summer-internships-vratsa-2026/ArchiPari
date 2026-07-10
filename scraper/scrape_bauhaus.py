@@ -67,7 +67,7 @@ PRODUCTS = {
         # HiKOKI DS18DF е чист drill-driver (DS = Driver Screwdriver),
         # както винтовертите при другите 4 магазина.
         "url": f"{BASE_URL}/akumulatoren-vintovert-hikoki-ds18df/p/135182",
-        "name": "Акумулаторна винтоверта 18V, 2 батерии",
+        "name": "Акумулаторен винтоверт 18V, 2 батерии",
         "category": "Инструменти",
         "unit": "брой",
         "label": "Акумулаторен винтоверт HiKOKI DS18DF, 18V, 2 батерии 2Ah, зарядно и куфар",

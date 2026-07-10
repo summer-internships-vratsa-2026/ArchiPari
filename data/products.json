@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T10:20:53.875257+03:00",
+  "lastUpdated": "2026-07-10T11:00:52.095363+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -112,7 +112,7 @@
     },
     {
       "id": "vintovertka-akum-18v",
-      "name": "Акумулаторна винтоверта 18V, 2 батерии",
+      "name": "Акумулаторен винтоверт 18V, 2 батерии",
       "category": "Инструменти",
       "unit": "брой",
       "offers": {
@@ -129,16 +129,16 @@
           "label": "Акумулаторен винтоверт BOSCH UniversalDrill 18V 2x1.5 Ah"
         },
         "inex": {
-          "price": 255.13,
-          "image": "https://inex-bg.com/media/23.07.2025/277AEE4AE13F4619AF7ABD5086E2798A.jpg",
-          "url": "https://inex-bg.com/p/akum-vintovert-metabo-bs18l18v-zaryadnokufar-602321500",
-          "label": "Акумулаторен винтоверт Metabo BS18L, 18V, 2 батерии, зарядно и куфар"
+          "price": 119.0,
+          "image": "https://inex-bg.com/media/13.05.2026/akum-vint-universaldrill18v-60-2x2-0ah-06039d7002-0000073379-1-tm.png",
+          "url": "https://inex-bg.com/p/akum-vint-universaldrill18v-60-2x2-0ah-06039d7002-0000073379",
+          "label": "Акумулаторен винтоверт Bosch UniversalDrill 18V-60, 18V, 2 x 2.0Ah, в куфар"
         },
         "gstroy": {
-          "price": 199.0,
-          "image": "https://assets.gstroy.bg/media/filer_public/5c/36/5c3697d6-34db-4270-92f1-f50dbd5d8378/homegsstroimstroimarket_pythonmediaftp_images30500150129_-_web.jpg",
-          "url": "https://gstroy.bg/product/63411-vintovert-akum-bosh-gsr-18v-50-2h20ah",
-          "label": "ВИНТОВЕРТ АКУМ. БОШ GSR 18V-50 2х2.0Ah"
+          "price": 168.0,
+          "image": "https://assets.gstroy.bg/media/filer_public/44/80/4480ea89-a08a-4c6d-8a26-121242d0cc2f/30500150155-1.png",
+          "url": "https://gstroy.bg/product/69363-vintovert-akumulatoren-sbosh-gsr-185-li-2h20ah-21-50nm",
+          "label": "ВИНТОВЕРТ АКУМУЛАТОРЕН с.БОШ GSR 185-LI 2х2.0Ah 21-50Nm"
         },
         "bauhaus": {
           "price": 149.0,

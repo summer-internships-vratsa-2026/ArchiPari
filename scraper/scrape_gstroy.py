@@ -66,11 +66,11 @@ PRODUCTS = {
     # 13303-samorazlivna-zamazka-cn68-25kg) ще се добави отново при новите
     # изисквания (Ceresit DA 25 kg) — засега умишлено я няма.
     "vintovertka-akum-18v": {
-        "url": f"{BASE_URL}/product/63411-vintovert-akum-bosh-gsr-18v-50-2h20ah",
-        "name": "Акумулаторна винтоверта 18V, 2 батерии",
+        "url": f"{BASE_URL}/product/69363-vintovert-akumulatoren-sbosh-gsr-185-li-2h20ah-21-50nm",
+        "name": "Акумулаторен винтоверт 18V, 2 батерии",
         "category": "Инструменти",
         "unit": "брой",
-        "label": "ВИНТОВЕРТ АКУМ. БОШ GSR 18V-50 2х2.0Ah",
+        "label": "ВИНТОВЕРТ АКУМУЛАТОРЕН с.БОШ GSR 185-LI 2х2.0Ah 21-50Nm",
     },
     "osb-plocha-15mm": {
         "url": f"{BASE_URL}/product/13013-osb-2-15mm-2440h1220",

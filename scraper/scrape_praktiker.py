@@ -72,7 +72,7 @@ PRODUCTS = {
         # без ударна функция. Проверено на живо (юли 2026): в наличност,
         # 168.70 € / 329.95 лв.
         "url": f"{BASE_URL}/Akumulatorni-bormashini-i-vintoverti/AKUMULATORNA-BEZChETKOVA-BORMAShINA-BOSCH-PROFESSIONAL-GSR-185-Li/p/144086",
-        "name": "Акумулаторна винтоверта 18V, 2 батерии",
+        "name": "Акумулаторен винтоверт 18V, 2 батерии",
         "category": "Инструменти",
         "unit": "брой",
         "label": "АКУМУЛАТОРЕН ВИНТОВЕРТ BOSCH PROFESSIONAL GSR 185 Li 18V, 50Nm, 2х2.0Ah",
