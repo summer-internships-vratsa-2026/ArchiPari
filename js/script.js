@@ -303,19 +303,10 @@
   /* ---------- Контактна форма (demo, без реален бекенд) ---------- */
  
   function initContactForm() {
-    const form = document.getElementById("contactForm");
-    const status = document.getElementById("formStatus");
-    if (!form) return;
- 
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      // ЗАБЕЛЕЖКА: това е само демонстрация на front-end.
-      // За реално изпращане на съобщения свържете формата с бекенд
-      // endpoint (напр. собствен сървър, Formspree, EmailJS и др.)
-      status.textContent = "Благодарим ви! Съобщението беше записано (демо режим — свържете формата с реален сървър, за да получавате имейли).";
-      status.className = "form-status show ok";
-      form.reset();
-    });
+    // ЗАБЕЛЕЖКА: реалната логика на контактната форма (проверка за вход +
+    // изпращане на имейл през /api/contact) вече е в js/contact.js — тук
+    // умишлено не правим нищо повече, за да няма два конфликтни submit
+    // listener-а на един и същ form елемент.
   }
  
   /* ---------- Мобилно меню ---------- */

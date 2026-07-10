@@ -1027,3 +1027,81 @@ textarea:focus-visible {
   font-size: 13px;
   padding: 9px 16px;
 }
+
+/* ---------- Автентикация (регистрация / вход / nav статус) ---------- */
+
+.auth-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--white);
+  opacity: 0.85;
+}
+.auth-nav a { color: var(--hazard-yellow); }
+.auth-nav a:hover { text-decoration: underline; }
+.auth-email {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.auth-wrap {
+  padding: 48px 0 80px;
+  max-width: 520px;
+}
+
+.auth-form { max-width: 100%; }
+
+.auth-switch {
+  margin-top: 14px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--steel-blue);
+  color: var(--steel-blue);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 12px 27px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-secondary:hover { background: var(--steel-blue); color: var(--white); text-decoration: none; }
+
+.auth-gate {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--hazard-yellow);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  max-width: 560px;
+}
+.auth-gate h3 {
+  font-family: var(--font-display);
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.auth-gate p { margin: 0 0 16px; color: var(--ink-soft); font-size: 14.5px; }
+.auth-gate-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.form-status.error { color: var(--rust); }
+
+/* Honeypot поле - невидимо за реални потребители, но ботовете, които
+   попълват автоматично всички полета, ще го засекат. */
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

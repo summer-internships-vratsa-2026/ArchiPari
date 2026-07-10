@@ -38,6 +38,7 @@
       <a href="index.html#products">Материали</a>
       <a href="basket.html">Калкулатор за ремонт</a>
       <a href="contact.html" class="active">Контакти</a>
+      <span id="authNav" class="auth-nav"></span>
     </nav>
   </div>
 </header>
@@ -51,7 +52,16 @@
 </section>
  
 <section class="container contact-wrap">
-  <form class="contact-form" id="contactForm" novalidate>
+  <div class="auth-gate" id="authGate" style="display:none;">
+    <h3>Трябва да влезеш в акаунта си</h3>
+    <p>За да ни изпратиш съобщение, първо направи безплатен акаунт или влез в него — така знаем на кой имейл да отговорим.</p>
+    <div class="auth-gate-actions">
+      <a class="btn-primary" href="login.html?redirect=contact.html">Вход</a>
+      <a class="btn-secondary" href="signup.html">Регистрация</a>
+    </div>
+  </div>
+
+  <form class="contact-form" id="contactForm" novalidate style="display:none;">
     <div class="form-row">
       <label for="name">Име</label>
       <input type="text" id="name" name="name" required autocomplete="name">
@@ -72,6 +82,11 @@
     <div class="form-row">
       <label for="message">Съобщение</label>
       <textarea id="message" name="message" required></textarea>
+    </div>
+    <!-- honeypot поле срещу ботове - невидимо за реални хора -->
+    <div class="form-row honeypot-field" aria-hidden="true">
+      <label for="website">Website</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
     </div>
     <button type="submit" class="btn-primary">Изпрати съобщение</button>
     <p class="form-status" id="formStatus"></p>
@@ -121,8 +136,11 @@
   </div>
 </footer>
  
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/auth.js"></script>
 <script src="js/data.js"></script>
 <script src="js/script.js"></script>
 <script src="js/basket.js"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>

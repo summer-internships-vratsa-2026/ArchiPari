@@ -3,30 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Сравнение на продукт — ArchiPari</title>
-<meta name="description" content="Детайлно сравнение на цени и снимки на строителен материал от различни магазини.">
+<title>Вход — ArchiPari</title>
+<meta name="description" content="Влез в акаунта си в ArchiPari, за да се свържеш с екипа ни.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xj5ui4e5d2");
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2NQYNVDC2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T2NQYNVDC2');
-</script>
- 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">Archi<span>Pari</span></a>
@@ -41,11 +23,30 @@
   </div>
 </header>
 <div class="hazard-strip"></div>
- 
-<main class="container" id="productDetailPage">
-  <div class="empty-state">Зареждане…</div>
-</main>
- 
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Вход</h1>
+    <p>Влез в акаунта си, за да можеш да се свържеш с екипа ни през формата за контакт.</p>
+  </div>
+</section>
+
+<section class="container auth-wrap">
+  <form class="contact-form auth-form" id="loginForm" novalidate>
+    <div class="form-row">
+      <label for="email">Имейл</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+    </div>
+    <div class="form-row">
+      <label for="password">Парола</label>
+      <input type="password" id="password" name="password" autocomplete="current-password" required>
+    </div>
+    <button type="submit" class="btn-primary">Влез</button>
+    <p class="form-status" id="formStatus"></p>
+    <p class="auth-switch">Нямаш акаунт? <a href="signup.html">Регистрирай се</a></p>
+  </form>
+</section>
+
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-col">
@@ -61,7 +62,7 @@
     </div>
     <div class="footer-col">
       <h4>Магазини в сравнението</h4>
-      <p>Praktiker · Homemax · Inex · Gstroy · Domestico · Bauhaus</p>
+      <p>Praktiker · Homemax · Inex · Gstroy</p>
     </div>
   </div>
   <div class="container footer-bottom">
@@ -69,12 +70,9 @@
     <span>Цените са ориентировъчни и може да се различават от касовата бележка в магазина.</span>
   </div>
 </footer>
- 
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="js/auth.js"></script>
-<script src="js/data.js"></script>
-<script src="js/script.js"></script>
-<script src="js/basket.js"></script>
-<script src="js/product.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>
