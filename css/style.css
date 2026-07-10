@@ -1105,3 +1105,26 @@ textarea:focus-visible {
   height: 1px;
   overflow: hidden;
 }
+
+/* ---------- Контактна форма - бележка за акаунта + социални мрежи ---------- */
+
+.auth-account-note {
+  font-size: 13.5px;
+  color: var(--steel-blue-dark);
+  background: #EAF1F7;
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin: 0 0 6px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.social-links a {
+  font-size: 14px;
+  color: var(--steel-blue);
+}
+.social-links a:hover { color: var(--hazard-yellow); }

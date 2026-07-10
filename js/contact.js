@@ -5,6 +5,7 @@
     const form = document.getElementById("contactForm");
     const gate = document.getElementById("authGate");
     const status = document.getElementById("formStatus");
+    const accountNote = document.getElementById("accountNote");
     if (!form || !window.ArchiPariAuth) return;
 
     const session = await window.ArchiPariAuth.getSession();
@@ -17,6 +18,11 @@
 
     form.style.display = "";
     if (gate) gate.style.display = "none";
+
+    if (accountNote) {
+      const email = session.user.email || "";
+      accountNote.textContent = `Ще изпратим съобщението от твоя акаунт: ${email}`;
+    }
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -55,7 +61,6 @@
             Authorization: `Bearer ${freshSession.access_token}`,
           },
           body: JSON.stringify({
-            name: form.name.value,
             topic: form.topic.value,
             message: form.message.value,
           }),
@@ -70,6 +75,9 @@
         status.textContent = "Съобщението е изпратено успешно! Ще се свържем с теб скоро.";
         status.className = "form-status show ok";
         form.reset();
+        if (accountNote) {
+          accountNote.textContent = `Ще изпратим съобщението от твоя акаунт: ${session.user.email || ""}`;
+        }
       } catch (err) {
         status.textContent = "Възникна грешка: " + err.message;
         status.className = "form-status show error";

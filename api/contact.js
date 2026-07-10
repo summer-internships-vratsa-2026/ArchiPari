@@ -63,7 +63,10 @@ module.exports = async function handler(req, res) {
   }
 
   // 3) Валидация на съдържанието
-  const { name, topic, message } = req.body || {};
+  // ЗАБЕЛЕЖКА: "name" вече НЕ идва от формата (полето беше премахнато -
+  // потребителят вече го е дал при регистрация) — взимаме го от Supabase
+  // user metadata, попълнено в js/signup.js при регистрация.
+  const { topic, message } = req.body || {};
 
   if (!message || typeof message !== "string" || message.trim().length < 3) {
     return res.status(400).json({ error: "Съобщението е твърде кратко." });
@@ -72,7 +75,7 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: "Съобщението е твърде дълго (макс. 5000 символа)." });
   }
 
-  const safeName = (typeof name === "string" ? name : "").slice(0, 200) || "(без име)";
+  const safeName = (user.user_metadata && user.user_metadata.full_name) || "(без име)";
   const safeTopic = (typeof topic === "string" ? topic : "general").slice(0, 100);
 
   // 4) Изпращане на имейл чрез Resend
