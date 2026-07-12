@@ -45,6 +45,13 @@ HEADERS = {
 # цимент/гипсокартон/плочки и т.н. провери какво предлага inex-bg.com,
 # преди да добавяш нови редове — може изобщо да няма съответствие.
 PRODUCTS = {
+    "gipsokarton-sonicboard-12-5-1200x2000": {
+        "url": f"{BASE_URL}/p/knauf-plosk-sonicboard-1-2m-2m12-5mm650067-sm42720",
+        "name": "Гипсокартон 12.5 мм, 1200/2000 мм",
+        "category": "Гипсокартон и мазилки",
+        "unit": "бр.",
+        "label": "Гипсокартон звукоизолиращ Sonicboard тип A13, 12.5 mm, Knauf, 2000х1200 мм",
+    },
     "mazilka-silikonova-d15-draskana-25kg": {
         # ЗАБЕЛЕЖКА: Inex продава Ceresit CT 74 (не DEKO Professional D1.5
         # като повечето други магазини) — виж matchNote в data/products.json.

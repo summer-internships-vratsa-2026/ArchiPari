@@ -27,6 +27,17 @@ HEADERS = {
 # "name", "category" и "unit" се ползват само за автоматично създаване
 # на нов продукт в data/products.json, ако той още го няма там.
 PRODUCTS = {
+    "gipsokarton-sonicboard-12-5-1200x2000": {
+        "url": f"{BASE_URL}/bg/Gipskarton/GIPSKARTON-SONICBOARD-1200-2000-12-5MM-KNAUF-A13/p/238154",
+        "name": "Гипсокартон 12.5 мм, 1200/2000 мм",
+        "category": "Гипсокартон и мазилки",
+        "unit": "бр.",
+        "label": "ГИПСКАРТОН SONICBOARD 1200/2000/12,5ММ KNAUF A13",
+        # ВАЖНО: продуктът НЕ се продава онлайн при Praktiker (само в
+        # магазин) - при скрейпване с requests може да върне грешна/липсваща
+        # цена, ако страницата показва "Продуктът не се продава онлайн"
+        # вместо реална цена. Провери test.html при първо пускане.
+    },
     "mazilka-silikonova-d15-draskana-25kg": {
         "url": f"{BASE_URL}/Mazilki/SILIKONOVA-MAZILKA-DRASKANA-D1-5-DEKO-Professional/p/471751",
         "name": "Силиконова мазилка D1,5, драскана, 25kg",

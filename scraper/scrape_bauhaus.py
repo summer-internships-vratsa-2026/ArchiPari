@@ -45,6 +45,13 @@ HEADERS = {
 }
 
 PRODUCTS = {
+    "gipsokarton-sonicboard-12-5-1200x2000": {
+        "url": f"{BASE_URL}/gipsokarton-knauf-sonicboard-tip-d-gkb/p/155209",
+        "name": "Гипсокартон 12.5 мм, 1200/2000 мм",
+        "category": "Гипсокартон и мазилки",
+        "unit": "бр.",
+        "label": "Гипсокартон Knauf Sonicboard тип D GKB, 2000х1200х12,5 мм",
+    },
     "mazilka-silikonova-d15-draskana-25kg": {
         "url": f"{BASE_URL}/silikonova-mazilka-deko-professional-d15/p/23650",
         "name": "Силиконова мазилка D1,5, драскана, 25kg",

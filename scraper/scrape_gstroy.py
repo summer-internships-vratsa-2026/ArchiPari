@@ -44,6 +44,22 @@ BASE_URL = "https://gstroy.bg"
 # при които намерих разумен еквивалент - виж бележката в README.md за
 # принципа "по-малко, но коректни съпоставки".
 PRODUCTS = {
+    "gipsokarton-sonicboard-12-5-1200x2000": {
+        "url": f"{BASE_URL}/product/155953-gipsokarton-sonic-board-125mm-120h200-knauf",
+        "name": "Гипсокартон 12.5 мм, 1200/2000 мм",
+        "category": "Гипсокартон и мазилки",
+        "unit": "бр.",
+        "label": "ГИПСОКАРТОН SONIC BOARD 12.5мм 1.20х2.00 КНАУФ",
+        # ПОПРАВЕНО: GStroy показва "цена за м²" ПРЕДИ "цена за брой" в
+        # рендирания текст на страницата, а _extract_price_bgn() взима
+        # ПЪРВОТО съвпадение — досега грешно грабваше цената за м²
+        # (~3.59 €), а не реалната цена за брой (~8.6 €, 2.4 м² на брой)
+        # — оттам и подозрително ниската цена спрямо другите магазини,
+        # флагната по-долу. "package_area" казва на scrape_all() да
+        # умножи извлечената стойност по площта на плочата, за да получи
+        # истинската цена за брой.
+        "package_area": 2.4,
+    },
     "mazilka-silikonova-d15-draskana-25kg": {
         # ЗАБЕЛЕЖКА: GStroy продава DEKO T8500 (не "DEKO Professional D1.5"
         # като повечето други магазини) — виж matchNote в data/products.json.
@@ -216,6 +232,15 @@ def scrape_all(delay_seconds: float = 1.5) -> dict:
                 html = fetch_static_html(url)
                 image = parse_image(html)
                 price = fetch_rendered_price(playwright, url)
+
+                # Виж бележката в PRODUCTS: за някои артикули (напр.
+                # гипсокартона Sonicboard) GStroy показва "цена за м²"
+                # преди "цена за брой" в рендирания текст, затова
+                # fetch_rendered_price() всъщност хваща цената за м².
+                # "package_area" превръща това обратно в реална цена за брой.
+                package_area = info.get("package_area")
+                if price is not None and package_area:
+                    price = round(price * package_area, 2)
 
                 if price is not None:
                     results[product_id] = {

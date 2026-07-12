@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T11:00:52.095363+03:00",
+  "lastUpdated": "2026-07-12T19:29:16.843099+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -68,7 +68,7 @@
           "label": "Цимент Premium Devnya 42.5R 25 кг."
         },
         "gstroy": {
-          "price": 9.72,
+          "price": 10.8,
           "image": "https://assets.gstroy.bg/media/filer_public/81/4b/814b9237-0b36-4324-9024-17d5195d35b7/13381-image-10200040013.jpg",
           "url": "https://gstroy.bg/product/13381-ciment-25kg-varovik-holsim-n42-5",
           "label": "ЦИМЕНТ 25кг ВАРОВИК ХОЛСИМ Н42.5 (CEM II/A-LL 42.5N)"
@@ -279,6 +279,47 @@
           "image": "https://res.cloudinary.com/domestico-bg/image/upload/c_lpad,dpr_2.0,f_auto,h_265,q_auto,w_265/v1/media/catalog/product/d/e/deko-silikonova-mazilka-d1.5.png?_i=AB",
           "url": "https://www.domestico.bg/silikonova-mazilka-deko-professional-d1-5-draskana-product",
           "label": "Силиконова мазилка DEKO Professional, D1.5, драскана структура"
+        }
+      }
+    },
+    {
+      "id": "gipsokarton-sonicboard-12-5-1200x2000",
+      "name": "Гипсокартон 12.5 мм, 1200/2000 мм",
+      "category": "Гипсокартон и мазилки",
+      "unit": "бр.",
+      "matchNote": "ВАЖНО: HomeMax не предлага звукоизолиращия Sonicboard тип A13/D, който продават другите 4 магазина — вместо него сме показали най-близкия им наличен продукт (Technogips Pro, влагоустойчив тип H2), който е РАЗЛИЧЕН по предназначение (влагозащита, не звукоизолация). Не ги приемай за директно сравними по цена. Освен това при Praktiker и HomeMax продуктът се продава САМО в магазин, не онлайн. Забележете и голямата разлика в цената при GStroy спрямо останалите — проверено е директно на живия сайт, но си струва да потвърдите наличността преди покупка.",
+      "offers": {
+        "praktiker": {
+          "price": 9.2,
+          "image": "https://api.praktiker.bg/medias/Product-details-main-238154.jpg?context=bWFzdGVyfHJvb3R8MjQ3MDI0fGltYWdlL2pwZWd8YURrMEwyaGpNaTgwTmprd05qazBPREkxTlRjM05DOVFjbTlrZFdOMExXUmxkR0ZwYkhNdGJXRnBibDh5TXpneE5UUXVhbkJufDQ3NzljNTU1OGM3ZjRjMWI0YjM4MGVhZTg1MjRlNzcwNWE4ZTdlNjU2NTRmMmQ0OWRmMjc5MzI1ZDU5N2UwNDY",
+          "url": "https://www.praktiker.bg/bg/Gipskarton/GIPSKARTON-SONICBOARD-1200-2000-12-5MM-KNAUF-A13/p/238154",
+          "label": "ГИПСКАРТОН SONICBOARD 1200/2000/12,5ММ KNAUF A13",
+          "warning": "Продуктът не се продава онлайн — само в магазин."
+        },
+        "homemax": {
+          "price": 8.94,
+          "image": "https://www.home-max.bg/static/media/ups/products/main/23390874.jpg?v=17.99",
+          "url": "https://www.home-max.bg/gipsokarton-technogips-pro-vlagoustojchiv/",
+          "label": "Гипсокартон Technogips Pro Влагоустойчив (тип H2) - РАЗЛИЧЕН тип от Sonicboard!",
+          "warning": "Продажба само в магазините — не се продава онлайн. Различен тип от другите оферти (влагоустойчив, не звукоизолиращ)."
+        },
+        "bauhaus": {
+          "price": 8.95,
+          "image": "https://bauhaus.bg/img/215111/640/640/GKB_web.png",
+          "url": "https://bauhaus.bg/gipsokarton-knauf-sonicboard-tip-d-gkb/p/155209",
+          "label": "Гипсокартон Knauf Sonicboard тип D GKB, 2000х1200х12,5 мм"
+        },
+        "inex": {
+          "price": 10.1,
+          "image": "https://inex-bg.com/media/28.04.2026/knauf-plosk-sonicboard-1-2m-2m12-5mm650067-sm42720-sm42720-1-tm.jpg",
+          "url": "https://inex-bg.com/p/knauf-plosk-sonicboard-1-2m-2m12-5mm650067-sm42720",
+          "label": "Гипсокартон звукоизолиращ Sonicboard тип A13, 12.5 mm, Knauf, 2000х1200 мм"
+        },
+        "gstroy": {
+          "price": 7.3,
+          "image": "https://assets.gstroy.bg/media/filer_public/be/05/be059fe0-ddaa-4ec0-b29f-b42732629b56/10700040100-1.jpeg",
+          "url": "https://gstroy.bg/product/155953-gipsokarton-sonic-board-125mm-120h200-knauf",
+          "label": "ГИПСОКАРТОН SONIC BOARD 12.5мм 1.20х2.00 КНАУФ"
         }
       }
     }

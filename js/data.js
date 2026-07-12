@@ -1,5 +1,5 @@
 window.STROYTSENI_DATA = {
-  "lastUpdated": "2026-07-10T08:43:46.326485+03:00",
+  "lastUpdated": "2026-07-10T11:00:52.095363+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -135,7 +135,7 @@ window.STROYTSENI_DATA = {
           "label": "Акумулаторен винтоверт Bosch UniversalDrill 18V-60, 18V, 2 x 2.0Ah, в куфар"
         },
         "gstroy": {
-          "price": 168.22,
+          "price": 168.0,
           "image": "https://assets.gstroy.bg/media/filer_public/44/80/4480ea89-a08a-4c6d-8a26-121242d0cc2f/30500150155-1.png",
           "url": "https://gstroy.bg/product/69363-vintovert-akumulatoren-sbosh-gsr-185-li-2h20ah-21-50nm",
           "label": "ВИНТОВЕРТ АКУМУЛАТОРЕН с.БОШ GSR 185-LI 2х2.0Ah 21-50Nm"
@@ -247,7 +247,7 @@ window.STROYTSENI_DATA = {
         "praktiker": {
           "price": 54.99,
           "image": "https://api.praktiker.bg/medias/471751.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8OTg5NTN8aW1hZ2UvanBlZ3xhR0ppTDJnNE9TOHlPVEF3TmpZek1qSTFOVFV4T0M1cWNHY3w1YjA1OTQ4MzhjMDAzZWYxMDg3NDE5ZmZlNjJjODcyY2RkZjAwMjY1NzhkNjJmZmFmNTM1Zjg0ZmI3MmY1ODg2",
-          "url": "https://praktiker.bg/bg/Mazilki/SILIKONOVA-MAZILKA-DRASKANA-D1-5-DEKO-Professional/p/471751",
+          "url": "https://www.praktiker.bg/Mazilki/SILIKONOVA-MAZILKA-DRASKANA-D1-5-DEKO-Professional/p/471751",
           "label": "СИЛИКОНОВА МАЗИЛКА ДРАСКАНА Д1.5 DEKO Professional, 25 кг"
         },
         "bauhaus": {
@@ -257,7 +257,7 @@ window.STROYTSENI_DATA = {
           "label": "Силиконова мазилка Deko Professional D1,5, 25 кг, бяла, драскана"
         },
         "gstroy": {
-          "price": 48.62,
+          "price": 50.57,
           "image": "https://assets.gstroy.bg/media/filer_public/fc/ea/fcead5b2-e646-4473-a297-42128f0fd1d3/10600070169_web.jpg",
           "url": "https://gstroy.bg/product/14835-mazilka-silikonova-orgahim-d1-5-25kg",
           "label": "МАЗИЛКА СИЛИКОНОВА DEKO T 8500 Д1.5 25кг"
@@ -275,10 +275,51 @@ window.STROYTSENI_DATA = {
           "label": "Силиконова мазилка Deko Professional D1.5 25 кг бяла"
         },
         "domestico": {
-          "price": 48.03,
-          "image": "https://res.cloudinary.com/domestico-bg/image/upload/c_lpad,dpr_2.0,f_auto,h_630,q_auto,w_630/v1/media/catalog/product/d/e/deko-silikonova-mazilka-d1.5.png?_i=AB",
+          "price": 48.056323913632575,
+          "image": "https://res.cloudinary.com/domestico-bg/image/upload/c_lpad,dpr_2.0,f_auto,h_265,q_auto,w_265/v1/media/catalog/product/d/e/deko-silikonova-mazilka-d1.5.png?_i=AB",
           "url": "https://www.domestico.bg/silikonova-mazilka-deko-professional-d1-5-draskana-product",
           "label": "Силиконова мазилка DEKO Professional, D1.5, драскана структура"
+        }
+      }
+    },
+    {
+      "id": "gipsokarton-sonicboard-12-5-1200x2000",
+      "name": "Гипсокартон 12.5 мм, 1200/2000 мм",
+      "category": "Гипсокартон и мазилки",
+      "unit": "бр.",
+      "matchNote": "ВАЖНО: HomeMax не предлага звукоизолиращия Sonicboard тип A13/D, който продават другите 4 магазина — вместо него сме показали най-близкия им наличен продукт (Technogips Pro, влагоустойчив тип H2), който е РАЗЛИЧЕН по предназначение (влагозащита, не звукоизолация). Не ги приемай за директно сравними по цена. Освен това при Praktiker и HomeMax продуктът се продава САМО в магазин, не онлайн. Забележете и голямата разлика в цената при GStroy спрямо останалите — проверено е директно на живия сайт, но си струва да потвърдите наличността преди покупка.",
+      "offers": {
+        "praktiker": {
+          "price": 9.2,
+          "image": "https://api.praktiker.bg/medias/Product-details-main-238154.jpg",
+          "url": "https://praktiker.bg/bg/Gipskarton/GIPSKARTON-SONICBOARD-1200-2000-12-5MM-KNAUF-A13/p/238154",
+          "label": "ГИПСКАРТОН SONICBOARD 1200/2000/12,5ММ KNAUF A13",
+          "warning": "Продуктът не се продава онлайн — само в магазин."
+        },
+        "homemax": {
+          "price": 8.94,
+          "image": "https://www.home-max.bg/static/media/ups/products/main/23390874.jpg",
+          "url": "https://www.home-max.bg/gipsokarton-technogips-pro-vlagoustojchiv/",
+          "label": "Гипсокартон Technogips Pro Влагоустойчив (тип H2) — ⚠ различен тип от Sonicboard",
+          "warning": "Продажба само в магазините — не се продава онлайн. Различен тип от другите оферти (влагоустойчив, не звукоизолиращ)."
+        },
+        "bauhaus": {
+          "price": 8.95,
+          "image": "https://bauhaus.bg/img/215111/640/640/GKB_web.png",
+          "url": "https://bauhaus.bg/gipsokarton-knauf-sonicboard-tip-d-gkb/p/155209",
+          "label": "Гипсокартон Knauf Sonicboard тип D GKB, 2000х1200х12,5 мм"
+        },
+        "inex": {
+          "price": 10.1,
+          "image": "https://inex-bg.com/media/28.04.2026/knauf-plosk-sonicboard-1-2m-2m12-5mm650067-sm42720-sm42720-1-tm.jpg",
+          "url": "https://inex-bg.com/p/knauf-plosk-sonicboard-1-2m-2m12-5mm650067-sm42720",
+          "label": "Гипсокартон звукоизолиращ Sonicboard тип A13, 12.5 mm, Knauf, 2000х1200 мм"
+        },
+        "gstroy": {
+          "price": 8.62,
+          "image": "https://assets.gstroy.bg/media/filer_public/be/05/be059fe0-ddaa-4ec0-b29f-b42732629b56/10700040100-1.jpeg",
+          "url": "https://gstroy.bg/product/155953-gipsokarton-sonic-board-125mm-120h200-knauf",
+          "label": "ГИПСОКАРТОН SONIC BOARD 12.5мм 1.20х2.00 КНАУФ"
         }
       }
     }

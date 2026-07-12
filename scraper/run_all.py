@@ -88,6 +88,8 @@ def _extract_offer_and_meta(entry):
         }
         if entry.get("label"):
             offer["label"] = entry["label"]
+        if entry.get("warning"):
+            offer["warning"] = entry["warning"]
         meta = None
         if entry.get("name"):
             meta = {
@@ -110,8 +112,15 @@ def merge_into_data(data: dict, scraped: dict) -> dict:
                 continue
  
             if product_id in by_id:
-                # Продуктът вече съществува -> обновяваме офертата
-                # (цена + снимка + линк) за този магазин.
+                # Продуктът вече съществува -> обновяваме офертата.
+                # Ако новите данни НЕ включват label/warning, пазим
+                # съществуващите (ръчно зададени бележки не изчезват
+                # тихомълком при следващо автоматично обновяване).
+                existing_offer = by_id[product_id]["offers"].get(store_id, {})
+                if "label" not in offer and "label" in existing_offer:
+                    offer["label"] = existing_offer["label"]
+                if "warning" not in offer and "warning" in existing_offer:
+                    offer["warning"] = existing_offer["warning"]
                 by_id[product_id]["offers"][store_id] = offer
                 updated += 1
             else:

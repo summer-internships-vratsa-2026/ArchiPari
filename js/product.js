@@ -30,7 +30,11 @@
     const buyButton = offer.url
       ? `<a class="btn-primary offer-detail-link" href="${offer.url}" target="_blank" rel="noopener noreferrer">Виж в ${storeName}</a>`
       : "";
- 
+
+    const warningHtml = offer.warning
+      ? `<div class="offer-warning">⚠ ${offer.warning}</div>`
+      : "";
+
     return `
       <article class="offer-detail-card ${isBest ? "best" : ""}">
         <img class="offer-detail-thumb" src="${img}" alt="${label}" loading="lazy"
@@ -39,6 +43,7 @@
           <div class="offer-detail-store">${storeName}</div>
           <div class="offer-detail-label">${label}</div>
           ${priceBlock}
+          ${warningHtml}
           ${buyButton}
         </div>
       </article>`;
