@@ -52,6 +52,13 @@ PRODUCTS = {
         "unit": "кофа",
         "label": "СИЛИКОНОВА МАЗИЛКА ДРАСКАНА Д1.5 DEKO Professional, 25 кг",
     },
+    "mazilka-silikonova-b2-vlachena-25kg": {  # <- същото id във всички скрапери за този продукт!
+        "url": f"{BASE_URL}/bg/Mazilki/SILIKONOVA-MAZILKA-VLAChENA-V2-DEKO-Professional/p/471753",
+        "name": "Силиконова мазилка В2, влачена, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "СИЛИКОНОВА МАЗИЛКА ВЛАЧЕНА В2 DEKO Professional, 25 кг",
+    },
     "pvc-lamperiya-wood": {
         # ЗАБЕЛЕЖКА: продуктовото "name" тук е material-неутрално нарочно —
         # реалният продукт е 3D MDF ламперия (не PVC!), докато при HomeMax

@@ -1,5 +1,5 @@
 window.STROYTSENI_DATA = {
-  "lastUpdated": "2026-07-10T11:00:52.095363+03:00",
+  "lastUpdated": "2026-07-12T19:46:52.822544+03:00",
   "stores": [
     {
       "id": "praktiker",
@@ -291,16 +291,16 @@ window.STROYTSENI_DATA = {
       "offers": {
         "praktiker": {
           "price": 9.2,
-          "image": "https://api.praktiker.bg/medias/Product-details-main-238154.jpg",
-          "url": "https://praktiker.bg/bg/Gipskarton/GIPSKARTON-SONICBOARD-1200-2000-12-5MM-KNAUF-A13/p/238154",
+          "image": "https://api.praktiker.bg/medias/Product-details-main-238154.jpg?context=bWFzdGVyfHJvb3R8MjQ3MDI0fGltYWdlL2pwZWd8YURrMEwyaGpNaTgwTmprd05qazBPREkxTlRjM05DOVFjbTlrZFdOMExXUmxkR0ZwYkhNdGJXRnBibDh5TXpneE5UUXVhbkJufDQ3NzljNTU1OGM3ZjRjMWI0YjM4MGVhZTg1MjRlNzcwNWE4ZTdlNjU2NTRmMmQ0OWRmMjc5MzI1ZDU5N2UwNDY",
+          "url": "https://www.praktiker.bg/bg/Gipskarton/GIPSKARTON-SONICBOARD-1200-2000-12-5MM-KNAUF-A13/p/238154",
           "label": "ГИПСКАРТОН SONICBOARD 1200/2000/12,5ММ KNAUF A13",
           "warning": "Продуктът не се продава онлайн — само в магазин."
         },
         "homemax": {
           "price": 8.94,
-          "image": "https://www.home-max.bg/static/media/ups/products/main/23390874.jpg",
+          "image": "https://www.home-max.bg/static/media/ups/products/main/23390874.jpg?v=17.99",
           "url": "https://www.home-max.bg/gipsokarton-technogips-pro-vlagoustojchiv/",
-          "label": "Гипсокартон Technogips Pro Влагоустойчив (тип H2) — ⚠ различен тип от Sonicboard",
+          "label": "Гипсокартон Technogips Pro Влагоустойчив (тип H2) - РАЗЛИЧЕН тип от Sonicboard!",
           "warning": "Продажба само в магазините — не се продава онлайн. Различен тип от другите оферти (влагоустойчив, не звукоизолиращ)."
         },
         "bauhaus": {
@@ -316,7 +316,7 @@ window.STROYTSENI_DATA = {
           "label": "Гипсокартон звукоизолиращ Sonicboard тип A13, 12.5 mm, Knauf, 2000х1200 мм"
         },
         "gstroy": {
-          "price": 8.62,
+          "price": 7.3,
           "image": "https://assets.gstroy.bg/media/filer_public/be/05/be059fe0-ddaa-4ec0-b29f-b42732629b56/10700040100-1.jpeg",
           "url": "https://gstroy.bg/product/155953-gipsokarton-sonic-board-125mm-120h200-knauf",
           "label": "ГИПСОКАРТОН SONIC BOARD 12.5мм 1.20х2.00 КНАУФ"
@@ -333,11 +333,11 @@ window.STROYTSENI_DATA = {
         "praktiker": {
           "price": 8.49,
           "image": "https://api.praktiker.bg/medias/Product-details-main-432837.jpg?context=bWFzdGVyfHJvb3R8MjcwODk4fGltYWdlL2pwZWd8YURNM0wyZzFZUzh6TkRFeE9UTTBOelV6TlRrd01pOVFjbTlrZFdOMExXUmxkR0ZwYkhNdGJXRnBibDgwTXpJNE16Y3VhbkJufDZkZTYwNmZiYTI1N2ZkZTQ1YzMyZDE0ZjE2ODc0NWI2NjYzYTMwNGNkYmE0OTg3ZWQ1YzQxYWFjNGI4ODUyMjg",
-          "url": "https://praktiker.bg/bg/Lepila-za-plochki/LEPILO-ZA-PLOChKI-CERESIT-CM-11-SIV/p/432837",
+          "url": "https://www.praktiker.bg/bg/Lepila-za-plochki/LEPILO-ZA-PLOChKI-CERESIT-CM-11-SIV/p/432837",
           "label": "ЛЕПИЛО ЗА ПЛОЧКИ CERESIT CM 11 СИВ, клас C1T, 25 кг"
         },
         "gstroy": {
-          "price": 5.71,
+          "price": 8.21,
           "image": "https://assets.gstroy.bg/media/filer_public/ce/eb/ceeb1fd1-d21a-4051-ad7c-352fc79eecad/10800010018_web.jpg",
           "url": "https://gstroy.bg/product/12802-lepilo-za-plochki-ceresit-sm11-25kg",
           "label": "ЛЕПИЛО ЗА ПЛОЧКИ CERESIT СМ11 25кг",
@@ -361,6 +361,45 @@ window.STROYTSENI_DATA = {
           "url": "https://inex-bg.com/p/promo-tserezit-sm-11-lepilo-za-plochki-25-kg-48br-sm14467",
           "label": "Лепило за плочки Ceresit CM 11, 25 кг",
           "warning": "Наличност показана само в конкретен обект (Строймаркет Инекс, Враца) — провери доставка/наличност преди покупка."
+        }
+      }
+    },
+    {
+      "id": "mazilka-silikonova-b2-vlachena-25kg",
+      "name": "Силиконова мазилка В2, влачена, 25kg",
+      "category": "Бои и лакове",
+      "unit": "кофа",
+      "matchNote": "Забележка за съпоставянето: всички оферти са DEKO Professional T8500, силиконова мазилка с влачена структура B2 (еднакъв продукт/линия). Inex НЕ предлага този вид мазилка (влачена структура B2) в наличния си каталог, затова не е включен в сравнението. При Bauhaus разфасовката е 25+2,5 кг гратис (общо 27.5 кг) вместо стандартните 25 кг при другите магазини — цената е за цялата кофа както се продава, не преизчислена за 25 кг, затова директното сравнение с останалите леко я подценява като 'по-скъпа за кг'.",
+      "offers": {
+        "praktiker": {
+          "price": 54.99,
+          "image": "https://api.praktiker.bg/medias/471753.jpg-Product-details-main?context=bWFzdGVyfHJvb3R8OTg5NTN8aW1hZ2UvanBlZ3xhREV5TDJoaVpTOHlPVEF3TmpZek1qWXhOVGsyTmk1cWNHY3wxN2EwZjBlZWY2YTIzYjk5MzQ4ODk1ODAyNzJlOGFkZGJkMjIxYTRmOWI3ZWRlY2U0ZDNmNTRjMGM5YTEzYzI2",
+          "url": "https://praktiker.bg/bg/Mazilki/SILIKONOVA-MAZILKA-VLAChENA-V2-DEKO-Professional/p/471753",
+          "label": "СИЛИКОНОВА МАЗИЛКА ВЛАЧЕНА В2 DEKO Professional, 25 кг"
+        },
+        "homemax": {
+          "price": 55.73,
+          "image": "https://www.home-max.bg/static/media/ups/products/main/24302807.jpg?v=17.99",
+          "url": "https://www.home-max.bg/silikonova-mazilka-deko-professional-v2-25-kg/",
+          "label": "Силиконова мазилка Deko Professional В2 25 кг"
+        },
+        "gstroy": {
+          "price": 48.62,
+          "image": "https://assets.gstroy.bg/media/filer_public/0f/55/0f559ad3-6f89-4deb-aa76-d37789b21f56/10600070183_web.jpg",
+          "url": "https://gstroy.bg/product/20950-mazilka-silikonova-deko-v2-25kg",
+          "label": "МАЗИЛКА СИЛИКОНОВА DEKO T 8500 В2 25кг"
+        },
+        "bauhaus": {
+          "price": 51.95,
+          "image": "https://bauhaus.bg/img/222978/640/640/60866659_web.png",
+          "url": "https://bauhaus.bg/silikonova-mazilka-deko-professional-b2-dpr/p/159737",
+          "label": "Силиконова мазилка Deko Professional B2 DPR, 25+2,5 кг гратис"
+        },
+        "domestico": {
+          "price": 50.58,
+          "image": "https://www.domestico.bg/media/catalog/product/p/o/po2o79x_jrgmhr6d29xgmmko.jpeg",
+          "url": "https://www.domestico.bg/silikonova-mazilka-deko-professional-t8500-vlachena-struktura-b2-product",
+          "label": "Силиконова мазилка Deko Professional T8500, Влачена структура B2"
         }
       }
     }

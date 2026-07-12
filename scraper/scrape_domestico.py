@@ -71,6 +71,13 @@ PRODUCTS = {
         "unit": "кофа",
         "label": "Силиконова мазилка DEKO Professional, D1.5, драскана структура",
     },
+    "mazilka-silikonova-b2-vlachena-25kg": {  # <- същото id във всички скрапери за този продукт!
+        "url": f"{BASE_URL}/silikonova-mazilka-deko-professional-t8500-vlachena-struktura-b2-product",
+        "name": "Силиконова мазилка В2, влачена, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "Силиконова мазилка Deko Professional T8500, Влачена структура B2",
+    },
     "mazilka-silikonova-b3-25kg": {
         "url": f"{BASE_URL}/silikonova-mazilka-deko-professional-b3-vlachena-product",
         "name": "Силиконова фасадна мазилка, влачена структура, 25 кг",

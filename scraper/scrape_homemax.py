@@ -60,6 +60,13 @@ PRODUCTS = {
         "unit": "кофа",
         "label": "Силиконова мазилка Deko Professional D1.5 25 кг бяла",
     },
+    "mazilka-silikonova-b2-vlachena-25kg": {  # <- същото id във всички скрапери за този продукт!
+        "url": f"{BASE_URL}/silikonova-mazilka-deko-professional-v2-25-kg/",
+        "name": "Силиконова мазилка В2, влачена, 25kg",
+        "category": "Бои и лакове",
+        "unit": "кофа",
+        "label": "Силиконова мазилка Deko Professional В2 25 кг",
+    },
     "cement-42-5-25kg": {  # <- същото id като в scrape_praktiker.py!
         "url": f"{BASE_URL}/ciment-bravo-42-5-n-torbi-po-25-kg-devnya/",
         "name": "Цимент 42.5, 25 кг",
