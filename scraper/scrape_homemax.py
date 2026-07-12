@@ -36,6 +36,13 @@ HEADERS = {
 # Ако продуктът се продава на брой/чувал като цяло (напр. чувал цимент),
 # просто НЕ задавай "unit_size" — цената на опаковката си Е базовата.
 PRODUCTS = {
+    "lepilo-plochki-ceresit-cm11-25kg": {
+        "url": f"{BASE_URL}/lepilo-za-keramichni-plochki-ceresit-sm-11-klas-s1t-25-kg/",
+        "name": "Лепило за плочки Ceresit CM 11, 25 кг",
+        "category": "Плочки и настилки",
+        "unit": "чувал",
+        "label": "Лепило за керамични плочки Ceresit СМ 11 Клас С1Т, 25 кг",
+    },
     "gipsokarton-sonicboard-12-5-1200x2000": {
         "url": f"{BASE_URL}/gipsokarton-technogips-pro-vlagoustojchiv/",
         "name": "Гипсокартон 12.5 мм, 1200/2000 мм",

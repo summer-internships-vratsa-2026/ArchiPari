@@ -27,6 +27,13 @@ HEADERS = {
 # "name", "category" и "unit" се ползват само за автоматично създаване
 # на нов продукт в data/products.json, ако той още го няма там.
 PRODUCTS = {
+    "lepilo-plochki-ceresit-cm11-25kg": {
+        "url": f"{BASE_URL}/bg/Lepila-za-plochki/LEPILO-ZA-PLOChKI-CERESIT-CM-11-SIV/p/432837",
+        "name": "Лепило за плочки Ceresit CM 11, 25 кг",
+        "category": "Плочки и настилки",
+        "unit": "чувал",
+        "label": "ЛЕПИЛО ЗА ПЛОЧКИ CERESIT CM 11 СИВ, клас C1T, 25 кг",
+    },
     "gipsokarton-sonicboard-12-5-1200x2000": {
         "url": f"{BASE_URL}/bg/Gipskarton/GIPSKARTON-SONICBOARD-1200-2000-12-5MM-KNAUF-A13/p/238154",
         "name": "Гипсокартон 12.5 мм, 1200/2000 мм",

@@ -322,6 +322,47 @@ window.STROYTSENI_DATA = {
           "label": "ГИПСОКАРТОН SONIC BOARD 12.5мм 1.20х2.00 КНАУФ"
         }
       }
+    },
+    {
+      "id": "lepilo-plochki-ceresit-cm11-25kg",
+      "name": "Лепило за плочки Ceresit CM 11, 25 кг",
+      "category": "Плочки и настилки",
+      "unit": "чувал",
+      "matchNote": "Забележки за съпоставянето: (1) Цената при GStroy (5.71 € / 11.16 лв.) НЕ е потвърдена директно от техния сайт — той рендира цената само с JavaScript и не успях да я прочета на живо. Стойността е взета от огледален сайт със същия каталог (gsstroimarket.bg, същото продуктово ID) — третирай я като ориентировъчна, докато скраперът не я потвърди сам. (2) Офертата на Inex показва наличност само в конкретен физически обект (Строймаркет Инекс, Враца) — не е ясно дали продуктът се доставя в цялата страна както обичайно при тях.",
+      "offers": {
+        "praktiker": {
+          "price": 8.49,
+          "image": "https://api.praktiker.bg/medias/Product-details-main-432837.jpg?context=bWFzdGVyfHJvb3R8MjcwODk4fGltYWdlL2pwZWd8YURNM0wyZzFZUzh6TkRFeE9UTTBOelV6TlRrd01pOVFjbTlrZFdOMExXUmxkR0ZwYkhNdGJXRnBibDgwTXpJNE16Y3VhbkJufDZkZTYwNmZiYTI1N2ZkZTQ1YzMyZDE0ZjE2ODc0NWI2NjYzYTMwNGNkYmE0OTg3ZWQ1YzQxYWFjNGI4ODUyMjg",
+          "url": "https://praktiker.bg/bg/Lepila-za-plochki/LEPILO-ZA-PLOChKI-CERESIT-CM-11-SIV/p/432837",
+          "label": "ЛЕПИЛО ЗА ПЛОЧКИ CERESIT CM 11 СИВ, клас C1T, 25 кг"
+        },
+        "gstroy": {
+          "price": 5.71,
+          "image": "https://assets.gstroy.bg/media/filer_public/ce/eb/ceeb1fd1-d21a-4051-ad7c-352fc79eecad/10800010018_web.jpg",
+          "url": "https://gstroy.bg/product/12802-lepilo-za-plochki-ceresit-sm11-25kg",
+          "label": "ЛЕПИЛО ЗА ПЛОЧКИ CERESIT СМ11 25кг",
+          "warning": "Цената не е потвърдена директно от GStroy (сайтът зарежда цената само с JavaScript) — взета е от огледален каталог. Провери при следващо скрейпване."
+        },
+        "homemax": {
+          "price": 8.49,
+          "image": "https://www.home-max.bg/static/media/ups/products/main/30065239_1.jpg?v=17.99",
+          "url": "https://www.home-max.bg/lepilo-za-keramichni-plochki-ceresit-sm-11-klas-s1t-25-kg/",
+          "label": "Лепило за керамични плочки Ceresit СМ 11 Клас С1Т, 25 кг"
+        },
+        "bauhaus": {
+          "price": 8.45,
+          "image": "https://bauhaus.bg/img/202081/640/640/60339902_CM11ceramicGres_web.png",
+          "url": "https://bauhaus.bg/lepilo-za-plochki-ceresit-cm-11-plus-ceramic-gres-c1t/p/28345",
+          "label": "Лепило за плочки Ceresit CM 11 Plus Ceramic & Gres C1T, 25 кг"
+        },
+        "inex": {
+          "price": 6.99,
+          "image": "https://inex-bg.com/media/25.05.2026/promo-tserezit-sm-11-lepilo-za-plochki-25-kg-48br-sm14467-sm14467-1-tm.jpg",
+          "url": "https://inex-bg.com/p/promo-tserezit-sm-11-lepilo-za-plochki-25-kg-48br-sm14467",
+          "label": "Лепило за плочки Ceresit CM 11, 25 кг",
+          "warning": "Наличност показана само в конкретен обект (Строймаркет Инекс, Враца) — провери доставка/наличност преди покупка."
+        }
+      }
     }
   ]
 };

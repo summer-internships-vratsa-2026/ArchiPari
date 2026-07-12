@@ -44,6 +44,17 @@ BASE_URL = "https://gstroy.bg"
 # при които намерих разумен еквивалент - виж бележката в README.md за
 # принципа "по-малко, но коректни съпоставки".
 PRODUCTS = {
+    "lepilo-plochki-ceresit-cm11-25kg": {
+        # ЗАБЕЛЕЖКА: цената НЕ е потвърдена директно от GStroy (JS-рендирана,
+        # виж fetch_rendered_price по-долу) — при добавянето й ръчно в
+        # products.json ползвах стойност от огледален сайт (същия каталог).
+        # Провери test.html / изхода в конзолата след първо скрейпване.
+        "url": f"{BASE_URL}/product/12802-lepilo-za-plochki-ceresit-sm11-25kg",
+        "name": "Лепило за плочки Ceresit CM 11, 25 кг",
+        "category": "Плочки и настилки",
+        "unit": "чувал",
+        "label": "ЛЕПИЛО ЗА ПЛОЧКИ CERESIT СМ11 25кг",
+    },
     "gipsokarton-sonicboard-12-5-1200x2000": {
         "url": f"{BASE_URL}/product/155953-gipsokarton-sonic-board-125mm-120h200-knauf",
         "name": "Гипсокартон 12.5 мм, 1200/2000 мм",

@@ -45,6 +45,13 @@ HEADERS = {
 }
 
 PRODUCTS = {
+    "lepilo-plochki-ceresit-cm11-25kg": {
+        "url": f"{BASE_URL}/lepilo-za-plochki-ceresit-cm-11-plus-ceramic-gres-c1t/p/28345",
+        "name": "Лепило за плочки Ceresit CM 11, 25 кг",
+        "category": "Плочки и настилки",
+        "unit": "чувал",
+        "label": "Лепило за плочки Ceresit CM 11 Plus Ceramic & Gres C1T, 25 кг",
+    },
     "gipsokarton-sonicboard-12-5-1200x2000": {
         "url": f"{BASE_URL}/gipsokarton-knauf-sonicboard-tip-d-gkb/p/155209",
         "name": "Гипсокартон 12.5 мм, 1200/2000 мм",
